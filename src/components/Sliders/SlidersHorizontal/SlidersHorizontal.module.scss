@@ -1,0 +1,23 @@
+@import 'styles/variables';
+
+.wrapper {
+  margin-top: 15px;
+  height: 420px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.thumbnails {
+  width: 220px;
+  overflow: hidden;
+}
+
+@media all and (min-width: 1776px) {
+  .wrapper {
+    height: 495px;
+  }
+
+  .thumbnails {
+    width: 346px;
+  }
+}

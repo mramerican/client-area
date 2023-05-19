@@ -1,0 +1,38 @@
+.wrapper {
+  position: absolute;
+  text-align: center;
+  bottom: 20px;
+  left: 232px;
+  cursor: pointer;
+  transition: left 100ms ease-in;
+
+  .left, .right {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1C1D1E;
+  }
+
+  .left:after, .right:after {
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-top: 15px;
+    border-top: 2px solid #9FA2B4;
+    border-right: 2px solid #9FA2B4;
+  }
+  .left:after {
+    margin-left: 5px;
+    transform: rotate(-135deg);
+  }
+  .right:after {
+    margin-left: 0;
+    transform: rotate(45deg);
+  }
+
+  &.hideSidebar {
+    left: 70px;
+  }
+}

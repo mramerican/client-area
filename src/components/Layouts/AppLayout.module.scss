@@ -1,0 +1,9 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 255px 1fr;
+  transition: grid-template-columns 100ms ease-in;
+
+  &.hideSidebar {
+    grid-template-columns: 92px 1fr;
+  }
+}

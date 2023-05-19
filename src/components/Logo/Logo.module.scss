@@ -1,0 +1,9 @@
+.wrapper {
+  padding: 17px 0 0 30px;
+  height: 38px;
+
+  &.hideSidebar {
+    padding-top: 18px;
+    height: 37px;
+  }
+}

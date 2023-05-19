@@ -1,0 +1,17 @@
+.wrapper {
+  height: 100vh;
+  overflow: scroll;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 50px 40px 20px 40px;
+
+  width: 940px;
+}
+
+@media all and (min-width: 1776px) {
+  .content {
+    width: 1441px;
+  }
+}

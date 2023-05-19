@@ -1,0 +1,82 @@
+@import "styles/variables";
+
+.wrapper {
+  height: 414px;
+  position: relative;
+  padding-left: 40px;
+  color: $color-white;
+  margin-bottom: 80px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  color: $color-white;
+  padding-top: 86px;
+  text-transform: uppercase;
+  width: 627px;
+
+  span {
+    color: $color-blue;
+  }
+}
+
+.description {
+  opacity: 0.8;
+  width: 425px;
+  padding-top: 15px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.bottomTitle {
+  width: 340px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 28px;
+  text-transform: uppercase;
+  padding-top: 54px;
+
+  span {
+    color: $color-blue;
+  }
+}
+
+.vector {
+  position: absolute;
+  bottom: 10px;
+  left: 239px;
+}
+
+@media all and (min-width: 1776px) {
+  .wrapper {
+    height: 569px;
+    padding-left: 52px;
+  }
+
+  .title {
+    font-size: 56px;
+    line-height: 56px;
+    padding-top: 144px;
+  }
+
+  .description {
+    font-size: 18px;
+    line-height: 24px;
+    width: 517px;
+  }
+
+  .bottomTitle {
+    padding-top: 86px;
+    width: 475px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .vector {
+    left: 312px;
+    bottom: 37px;
+  }
+}

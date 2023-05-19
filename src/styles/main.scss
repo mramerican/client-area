@@ -1,0 +1,15 @@
+@import "styles/fonts";
+@import "styles/normalize";
+@import "styles/variables";
+
+body {
+  background-color: $background;
+  font-family: $fontFamily;
+  font-style: normal;
+}
+
+body, html {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}

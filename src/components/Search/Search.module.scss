@@ -1,0 +1,39 @@
+@import "styles/variables";
+
+.wrapper {
+  padding: 35px 15px 45px 30px;
+  position: relative;
+
+  &.hideSidebar {
+    .icon {
+      cursor: pointer;
+    }
+
+    .input {
+      visibility: hidden;
+    }
+  }
+}
+
+.icon {
+  position: absolute;
+  left: 30px;
+  top: 34px;
+}
+
+.input {
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+
+  border-bottom: 1px solid $color-grey;
+  color: $color-white;
+  padding: 0 30px 15px 35px;
+  font-size: 14px;
+
+  &:focus, &:hover {
+    border-bottom-color: $color-blue;
+  }
+}

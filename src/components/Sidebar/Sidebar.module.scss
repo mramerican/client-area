@@ -1,0 +1,15 @@
+@import "styles/variables";
+
+.wrapper {
+  background: $background-dark;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: $color-grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  overflow: scroll;
+}
