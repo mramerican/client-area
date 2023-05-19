@@ -8,6 +8,10 @@ import ImgSlideLarge3 from 'images/HomePage/SlidersHorizontal/slide4_large.png'
 import ImgSlideSmall3 from 'images/HomePage/SlidersHorizontal/slide4_small.png'
 import ImgSlideLarge4 from 'images/HomePage/SlidersHorizontal/slide1_large.png'
 import ImgSlideSmall4 from 'images/HomePage/SlidersHorizontal/slide1_small.png'
+import ImgSlideLarge5 from 'images/HomePage/SlidersHorizontal/slide5_large.png'
+import ImgSlideSmall5 from 'images/HomePage/SlidersHorizontal/slide5_small.png'
+import ImgSlideLarge6 from 'images/HomePage/SlidersHorizontal/slide6_large.png'
+import ImgSlideSmall6 from 'images/HomePage/SlidersHorizontal/slide6_small.png'
 
 import ImgThSmall1 from 'images/HomePage/SlidersHorizontal/thumbnail_image1_small.png'
 import ImgThLarge1 from 'images/HomePage/SlidersHorizontal/thumbnail_image1_large.png'
@@ -70,8 +74,8 @@ export const data = [
     title: 'Irish Weekend<br/>Bonus Buy',
     thumbnailImgSmall: ImgThSmall5,
     thumbnailImgLarge: ImgThLarge5,
-    imgSmall: ImgSlideSmall4,
-    imgLarge: ImgSlideLarge4,
+    imgSmall: ImgSlideSmall5,
+    imgLarge: ImgSlideLarge5,
     banner: Banner,
     id: 5,
     description: 'Plunge into the world’s largest and most vibrant festival, Rio de Janeiro Carnival. Rio de Janeiro is a city that beats to its own drum.',
@@ -81,8 +85,8 @@ export const data = [
     title: 'Treasure Snipes',
     thumbnailImgSmall: ImgThSmall6,
     thumbnailImgLarge: ImgThLarge6,
-    imgSmall: ImgSlideSmall4,
-    imgLarge: ImgSlideLarge4,
+    imgSmall: ImgSlideSmall6,
+    imgLarge: ImgSlideLarge6,
     banner: Banner,
     id: 6,
     description: 'Plunge into the world’s largest and most vibrant festival, Rio de Janeiro Carnival. Rio de Janeiro is a city that beats to its own drum.',
