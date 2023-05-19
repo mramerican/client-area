@@ -6,6 +6,8 @@ import classNames from 'classnames';
 import { ReactComponent as SearchIcon } from 'images/Icons/Search.svg'
 import { sidebarSelector, openSidebar } from 'store/slices/sidebar';
 
+import { getRoutPatch } from 'utils/route';
+
 import styles from './Search.module.scss';
 
 const Search = () => {
@@ -25,7 +27,7 @@ const Search = () => {
     if (event.key === 'Enter') {
       const searchText = event.target.value.trim()
       if (searchText) {
-        navigate(`/search/${searchText}`);
+        navigate(getRoutPatch(`search/${searchText}`));
       }
     }
   }, [navigate]);
