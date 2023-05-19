@@ -14,7 +14,7 @@ import Tournaments from 'components/pages/Tournaments';
 
 export const Pages = {
   'home': {
-    path: '/',
+    path: '/client-area',
     element: <Home/>
   },
   'all-games': {
