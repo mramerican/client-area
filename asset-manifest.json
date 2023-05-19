@@ -1,15 +1,19 @@
 {
   "files": {
     "main.css": "/client-area/static/css/main.e147ac1d.css",
-    "main.js": "/client-area/static/js/main.ce1565e1.js",
+    "main.js": "/client-area/static/js/main.e4eb3884.js",
     "static/media/Banner_large.png": "/client-area/static/media/Banner_large.14a305babcdef53fd67b.png",
+    "static/media/slide6_large.png": "/client-area/static/media/slide6_large.7a6115fb514be6faf85b.png",
     "static/media/slide2_large.png": "/client-area/static/media/slide2_large.826bb9726800a2b1dfbb.png",
     "static/media/slide1_large.png": "/client-area/static/media/slide1_large.71f09d453bc6910a37ff.png",
     "static/media/slide4_large.png": "/client-area/static/media/slide4_large.39fecb94bf83d4106976.png",
+    "static/media/slide5_large.png": "/client-area/static/media/slide5_large.40026810314884aa5eab.png",
     "static/media/slide3_large.png": "/client-area/static/media/slide3_large.6442635e8446b8a07194.png",
+    "static/media/slide6_small.png": "/client-area/static/media/slide6_small.8b5eb48eed6e44e68217.png",
     "static/media/Banner_small.png": "/client-area/static/media/Banner_small.33d4580f8ec1aabbda1a.png",
     "static/media/slide2_small.png": "/client-area/static/media/slide2_small.122e2af5e8b2cb95fb7e.png",
     "static/media/slide1_small.png": "/client-area/static/media/slide1_small.5fc8876d2424440a03af.png",
+    "static/media/slide5_small.png": "/client-area/static/media/slide5_small.444122d49927e21d0949.png",
     "static/media/slide4_small.png": "/client-area/static/media/slide4_small.9d21668a61d82973bd64.png",
     "static/media/slide3_small.png": "/client-area/static/media/slide3_small.af2b15beacb513e4140f.png",
     "static/media/Hind-Regular.ttf": "/client-area/static/media/Hind-Regular.f0d7cad3b896e7103ff4.ttf",
@@ -46,10 +50,10 @@
     "static/media/Search.svg": "/client-area/static/media/Search.17a77064567a7be41c49d0476573c6f5.svg",
     "static/media/ArrowCircle.svg": "/client-area/static/media/ArrowCircle.13ad139101ca8d6c23c1bf828a7378f7.svg",
     "main.e147ac1d.css.map": "/client-area/static/css/main.e147ac1d.css.map",
-    "main.ce1565e1.js.map": "/client-area/static/js/main.ce1565e1.js.map"
+    "main.e4eb3884.js.map": "/client-area/static/js/main.e4eb3884.js.map"
   },
   "entrypoints": [
     "static/css/main.e147ac1d.css",
-    "static/js/main.ce1565e1.js"
+    "static/js/main.e4eb3884.js"
   ]
 }
