@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { NavLink, useLocation } from 'react-router-dom';
 
-import { sidebarSelector, openSubNav, closeSubNav, openSidebar } from 'store/slices/sidebar';
+import { sidebarSelector, openSidebar } from 'store/slices/sidebar';
 
 import styles from './SidebarItem.module.scss'
 
@@ -32,16 +32,11 @@ const SidebarItem = ({ title, icon, path, subNav }) => {
   const toggleSubNav = useCallback(() => setSubnav((prevState) => !prevState), [])
 
   useEffect(() => {
-    if (subNav) {
-      subnav ? dispatch(openSubNav(title)) : dispatch(closeSubNav(title))
-    }
-  }, [title, subnav, subNav, dispatch])
-
-  useEffect(() => {
-    if (!isVisibleSidebar && subnav) {
+    if (subNav && subnav && !isVisibleSidebar) {
       dispatch(openSidebar())
     }
-  }, [dispatch, isVisibleSidebar, subnav, title])
+    // eslint-disable-next-line
+  }, [subnav, subNav])
 
   useEffect(() => {
     if (!subnav && subNav) {

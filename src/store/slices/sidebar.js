@@ -2,8 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { getVisible, setVisible } from 'utils/toggleSidebar';
 
 const initialState = {
-  isVisible: getVisible(),
-  openSubNav: []
+  isVisible: getVisible()
 }
 
 export const sidebarMiddleware = ({ getState }) => {
@@ -25,27 +24,16 @@ const sidebarSlice = createSlice({
     },
     openSidebar: state => {
       state.isVisible = true
-    },
-    openSubNav: (state, action) => {
-      const setArray = new Set(state.openSubNav)
-      setArray.add(action.payload)
-      state.openSubNav = Array.from(setArray)
-    },
-    closeSubNav: (state, action) => {
-      state.openSubNav = state.openSubNav.filter(subNav => subNav !== action.payload)
     }
   },
 })
 
 export const sidebarSelector = {
-  getVisible: state => state.sidebar.isVisible,
-  getOpenSubNav: state => state.sidebar.openSubNav
+  getVisible: state => state.sidebar.isVisible
 }
 
 export const {
   openSidebar,
-  toggleVisible,
-  openSubNav,
-  closeSubNav
+  toggleVisible
 } = sidebarSlice.actions
 export default sidebarSlice.reducer

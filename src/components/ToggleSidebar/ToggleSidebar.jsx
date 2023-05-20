@@ -8,12 +8,11 @@ import styles from './ToggleSidebar.module.scss';
 const ToggleSidebar = () => {
   const dispatch = useDispatch()
   const isVisible = useSelector(sidebarSelector.getVisible)
-  const getOpenSubNav = useSelector(sidebarSelector.getOpenSubNav)
 
   const handleClick = useCallback(() => {
-    !getOpenSubNav.length && dispatch(toggleVisible(!isVisible))
+    dispatch(toggleVisible(!isVisible))
     // eslint-disable-next-line
-  }, [isVisible, getOpenSubNav])
+  }, [isVisible])
 
   return (
     <div
