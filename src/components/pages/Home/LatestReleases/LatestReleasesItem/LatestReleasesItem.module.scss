@@ -2,6 +2,13 @@
 
 .wrapper {
   width: 171px;
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $background-lightGrey;
+  }
 }
 
 .content {
