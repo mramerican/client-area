@@ -1,9 +1,12 @@
-import SlidersHorizontalActive
-  from 'components/Sliders/SlidersHorizontal/SlidersHorizontalActive/SlidersHorizontalActive';
 import React, { useCallback, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 
 
+import { viewModeSelector } from 'store/slices/viewMode';
+
+import SlidersHorizontalActive
+  from 'components/Sliders/SlidersHorizontal/SlidersHorizontalActive/SlidersHorizontalActive';
 import SlidersHorizontalItem from 'components/Sliders/SlidersHorizontal/SlidersHorizontalItem/SlidersHorizontalItem';
 
 import styles from './SlidersHorizontal.module.scss';
@@ -36,6 +39,7 @@ const findNexSlide = (data, activeSlide) => {
 const SlidersHorizontal = ({ data }) => {
   const [activeSlide, setActiveSlide] = useState(data[0])
   const [pause, setPause] = useState(false);
+  const viewMode = useSelector(viewModeSelector.getViewMode)
 
   const handleClickItem = useCallback((item) => {
     setActiveSlide(item)
@@ -58,6 +62,7 @@ const SlidersHorizontal = ({ data }) => {
         key={activeSlide.id}
         activeSlide={activeSlide}
         handleClick={handleClickSlide}
+        viewMode={viewMode}
       />
       <div className={styles.thumbnails}>
         {data.map(item => <SlidersHorizontalItem
@@ -65,6 +70,7 @@ const SlidersHorizontal = ({ data }) => {
           isActive={item.id === activeSlide.id}
           item={item}
           handleClick={handleClickItem}
+          viewMode={viewMode}
         />)}
       </div>
     </div>

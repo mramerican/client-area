@@ -1,0 +1,28 @@
+@import 'styles/variables';
+
+.wrapper {
+  width: 302px;
+}
+
+.title {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: $color-dark;
+}
+
+.dateRelease {
+  margin-top: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 17px;
+  color: $color-blue;
+  text-transform: uppercase;
+}
+
+@media all and (min-width: 1776px) {
+  .wrapper {
+    width: 468px;
+  }
+}

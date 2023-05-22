@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
 
-import { viewModeSelector } from 'store/slices/viewMode';
 import { VIEW_MODE } from 'utils/viewMode';
 
 import styles from './SlidersHorizontalItem.module.scss';
@@ -14,10 +12,10 @@ const propTypes = {
     title: PropTypes.string.isRequired,
   }).isRequired,
   isActive: PropTypes.bool.isRequired,
-  handleClick: PropTypes.func.isRequired
+  handleClick: PropTypes.func.isRequired,
+  viewMode: PropTypes.string.isRequired
 }
-const SlidersHorizontalItem = ({ item, isActive, handleClick }) => {
-  const viewMode = useSelector(viewModeSelector.getViewMode)
+const SlidersHorizontalItem = ({ item, isActive, handleClick, viewMode }) => {
   const imgMode = viewMode === VIEW_MODE.SIMPLE ? 'thumbnailImgSmall' : 'thumbnailImgLarge'
 
   return (
