@@ -21,10 +21,12 @@
 
   .checkIcon {
     box-sizing: border-box;
-    position: relative;
     display: block;
     transform: scale(var(--ggs,1));
+    position: relative;
+    top: 2px;
     width: 14px;
+    height: 100%;
 
     &::after {
       content: "";
