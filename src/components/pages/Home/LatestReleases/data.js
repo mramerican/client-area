@@ -16,36 +16,42 @@ export const data = [
     imgSmall: ImgSmall1,
     imgLarge: ImgLarge1,
     title: 'Mega Greatest Catch Bonus Buy',
+    category: 'Video slot',
     id: 1111
   },
   {
     imgSmall: ImgSmall2,
     imgLarge: ImgLarge2,
     title: 'Funny Hunting',
+    category: 'Instant game',
     id: 2222
   },
   {
     imgSmall: ImgSmall3,
     imgLarge: ImgLarge3,
     title: 'Sold it!',
+    category: 'Video slot',
     id: 3333
   },
   {
     imgSmall: ImgSmall4,
     imgLarge: ImgLarge4,
     title: 'Wonder Farm Bonus Buy',
+    category: 'Video slot',
     id: 4444
   },
   {
     imgSmall: ImgSmall5,
     imgLarge: ImgLarge5,
     title: 'Treasures of the Gods',
+    category: 'Instant game',
     id: 5555
   },
   {
     imgSmall: ImgSmall6,
     imgLarge: ImgLarge6,
     title: 'Mega Greatest Catch Bonus Buy',
+    category: 'Video slot',
     id: 6666
   }
 ]

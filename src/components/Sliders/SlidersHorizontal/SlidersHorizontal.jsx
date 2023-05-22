@@ -20,6 +20,7 @@ const propTypes = {
       imgSmall: PropTypes.string.isRequired,
       imgLarge: PropTypes.string.isRequired,
       banner: PropTypes.string.isRequired,
+      category: PropTypes.string.isRequired,
       id: PropTypes.number.isRequired,
       description: PropTypes.string.isRequired,
       link: PropTypes.string.isRequired,

@@ -1,0 +1,53 @@
+@import "styles/variables";
+
+.wrapper {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  height: 22px;
+
+  .number {
+    opacity: 0.8;
+    margin-right: 5px;
+    font-size: 14px;
+    line-height: 20px;
+    position: relative;
+    top: 1px;
+  }
+
+  .copy {
+    opacity: 0;
+  }
+
+  .checkIcon {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 14px;
+    height: 22px;
+
+    &::after {
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      position: absolute;
+      left: 1px;
+      top: -1px;
+      width: 6px;
+      height: 10px;
+      border-width: 0 2px 2px 0;
+      border-style: solid;
+      border-color: $color-green;;
+      transform-origin: bottom left;
+      transform: rotate(45deg)
+    }
+  }
+
+  &:hover {
+    .copy {
+      opacity: 1;
+    }
+  }
+}

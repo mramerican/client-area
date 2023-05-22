@@ -33,6 +33,7 @@ export const data = [
     imgSmall: ImgSlideSmall1,
     imgLarge: ImgSlideLarge1,
     banner: Banner,
+    category: 'Video slot',
     id: 1,
     description: 'Plunge into the world’s largest and most vibrant festival, Rio de Janeiro Carnival. Rio de Janeiro is a city that beats to its own drum.',
     link: '/'
@@ -44,6 +45,7 @@ export const data = [
     imgSmall: ImgSlideSmall2,
     imgLarge: ImgSlideLarge2,
     banner: Banner,
+    category: 'Video slot',
     id: 2,
     description: 'Plunge into the world’s largest and most vibrant festival, Rio de Janeiro Carnival. Rio de Janeiro is a city that beats to its own drum.',
     link: '/'
@@ -55,6 +57,7 @@ export const data = [
     imgSmall: ImgSlideSmall3,
     imgLarge: ImgSlideLarge3,
     banner: Banner,
+    category: 'Video slot',
     id: 3,
     description: 'Plunge into the world’s largest and most vibrant festival, Rio de Janeiro Carnival. Rio de Janeiro is a city that beats to its own drum.',
     link: '/'
@@ -66,6 +69,7 @@ export const data = [
     imgSmall: ImgSlideSmall4,
     imgLarge: ImgSlideLarge4,
     banner: Banner,
+    category: 'Video slot',
     id: 4,
     description: 'Plunge into the world’s largest and most vibrant festival, Rio de Janeiro Carnival. Rio de Janeiro is a city that beats to its own drum.',
     link: '/'
@@ -77,6 +81,7 @@ export const data = [
     imgSmall: ImgSlideSmall5,
     imgLarge: ImgSlideLarge5,
     banner: Banner,
+    category: 'Video slot',
     id: 5,
     description: 'Plunge into the world’s largest and most vibrant festival, Rio de Janeiro Carnival. Rio de Janeiro is a city that beats to its own drum.',
     link: '/'
@@ -88,6 +93,7 @@ export const data = [
     imgSmall: ImgSlideSmall6,
     imgLarge: ImgSlideLarge6,
     banner: Banner,
+    category: 'Video slot',
     id: 6,
     description: 'Plunge into the world’s largest and most vibrant festival, Rio de Janeiro Carnival. Rio de Janeiro is a city that beats to its own drum.',
     link: '/'

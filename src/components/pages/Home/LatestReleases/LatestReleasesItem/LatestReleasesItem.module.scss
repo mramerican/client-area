@@ -14,30 +14,20 @@
 .content {
   display: flex;
   margin-top: 11px;
+  color: $color-grey;
+  font-size: 14px;
 
   .videoSlot {
     padding: 4px 8px;
 
-    width: 53px;
     height: 12px;
 
     color: $color-blue;
-    font-size: 12px;
     line-height: 12px;
     font-weight: 500;
 
     background-color: rgba(0, 153, 250, 0.1);
     border-radius: 12px;
-  }
-
-  .gameId {
-    font-size: 12px;
-    line-height: 17px;
-    color: $color-grey;
-    margin-left: 13px;
-
-    display: flex;
-    align-items: center;
   }
 }
 
@@ -47,6 +37,10 @@
   font-size: 14px;
   line-height: 17px;
   color: $color-black;
+}
+
+.copy {
+  fill: $color-grey;
 }
 
 @media all and (min-width: 1776px) {
