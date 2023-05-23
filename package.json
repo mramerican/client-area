@@ -29,7 +29,9 @@
     "lint": "eslint --fix --max-warnings 0 --ext .js,.jsx ./src",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
-  "pre-commit": [ "lint" ],
+  "pre-commit": [
+    "lint"
+  ],
   "eslintConfig": {
     "extends": [
       "react-app",
