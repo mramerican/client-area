@@ -20,6 +20,7 @@
     "sass": "^1.62.1"
   },
   "scripts": {
+    "prestart": "cp scripts/pre-commit .git/hooks/ && chmod +x .git/hooks/pre-commit && echo 'hook copied'",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -28,11 +29,6 @@
     "deploy": "gh-pages -d build",
     "lint": "eslint --fix --max-warnings 0 --ext .js,.jsx ./src",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint npm run format"
-    }
   },
   "eslintConfig": {
     "extends": [
