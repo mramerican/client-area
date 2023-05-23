@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/client-area/static/css/main.e19d44c1.css",
-    "main.js": "/client-area/static/js/main.27c3416b.js",
+    "main.css": "/client-area/static/css/main.5418721e.css",
+    "main.js": "/client-area/static/js/main.21d22fcf.js",
     "static/media/Banner_large.png": "/client-area/static/media/Banner_large.14a305babcdef53fd67b.png",
     "static/media/slide6_large.png": "/client-area/static/media/slide6_large.7a6115fb514be6faf85b.png",
     "static/media/slide2_large.png": "/client-area/static/media/slide2_large.826bb9726800a2b1dfbb.png",
@@ -60,11 +60,11 @@
     "static/media/Logo.svg": "/client-area/static/media/Logo.6949606b08c72d8a7e31185963ef62a3.svg",
     "static/media/Search.svg": "/client-area/static/media/Search.17a77064567a7be41c49d0476573c6f5.svg",
     "static/media/ArrowCircle.svg": "/client-area/static/media/ArrowCircle.13ad139101ca8d6c23c1bf828a7378f7.svg",
-    "main.e19d44c1.css.map": "/client-area/static/css/main.e19d44c1.css.map",
-    "main.27c3416b.js.map": "/client-area/static/js/main.27c3416b.js.map"
+    "main.5418721e.css.map": "/client-area/static/css/main.5418721e.css.map",
+    "main.21d22fcf.js.map": "/client-area/static/js/main.21d22fcf.js.map"
   },
   "entrypoints": [
-    "static/css/main.e19d44c1.css",
-    "static/js/main.27c3416b.js"
+    "static/css/main.5418721e.css",
+    "static/js/main.21d22fcf.js"
   ]
 }
