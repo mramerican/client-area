@@ -1,10 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import BannerLarge from 'images/HomePage/Banner_large.png';
-import BannerSmall from 'images/HomePage/Banner_small.png';
-import VectorLarge from 'images/HomePage/Vector_large.png';
-import VectorSmall from 'images/HomePage/Vector_small.png';
+import BannerLarge from 'images/HomePage/Banner/Banner_large.png';
+import BannerSmall from 'images/HomePage/Banner/Banner_small.png';
+import VectorLarge from 'images/HomePage/Banner/Vector_large.png';
+import VectorSmall from 'images/HomePage/Banner/Vector_small.png';
 
 import { viewModeSelector } from 'store/slices/viewMode';
 import { VIEW_MODE } from 'utils/viewMode';

@@ -2,19 +2,15 @@
 
 .wrapper {
   border-radius: 12px;
+  overflow: hidden;
   display: flex;
   text-align: center;
   align-items: center;
   cursor: pointer;
-  margin-bottom: 11px;
   position: relative;
 
   img, .title {
     z-index: 1;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
   }
 
   .title {
@@ -29,7 +25,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: 0;
+    border-radius: 12px;
 
     .processActive, .processProgress {
       border-radius: 12px;
@@ -47,6 +43,38 @@
     .processProgress {
       background-color: $background-grey;
       animation: progress 7000ms linear;
+    }
+  }
+
+  &.vertical {
+    margin-bottom: 11px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .progress {
+      z-index: 0;
+    }
+  }
+
+  &.horizontal {
+    .progress {
+      z-index: 2;
+      overflow: hidden;
+      opacity: 0.3;
+
+      .processProgress {
+        background-color: $background-darkGrey;
+      }
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &.active:hover {
+      opacity: 1;
     }
   }
 

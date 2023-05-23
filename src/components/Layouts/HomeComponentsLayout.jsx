@@ -10,7 +10,10 @@ const propTypes = {
   title: PropTypes.string.isRequired,
   linkPath: PropTypes.string.isRequired,
   linkTitle: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired
 }
 
 const HomeComponentsLayout = ({ title, linkPath, linkTitle, children }) => {

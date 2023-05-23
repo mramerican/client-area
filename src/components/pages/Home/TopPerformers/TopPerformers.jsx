@@ -1,7 +1,7 @@
 import React from 'react';
 
 import HomeComponentsLayout from 'components/Layouts/HomeComponentsLayout';
-import SlidersHorizontal from 'components/Sliders/SlidersHorizontal/SlidersHorizontal';
+import Slider from 'components/Slider/Slider';
 
 import { data } from 'components/pages/Home/TopPerformers/data'
 const TopPerformers = () => {
@@ -11,7 +11,7 @@ const TopPerformers = () => {
       linkPath="all-games"
       linkTitle="All Games"
     >
-      <SlidersHorizontal data={data} />
+      <Slider data={data} type="vertical" />
     </HomeComponentsLayout>
   );
 };

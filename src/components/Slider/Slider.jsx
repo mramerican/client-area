@@ -1,35 +1,26 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
-
+import classNames from 'classnames';
 
 import { viewModeSelector } from 'store/slices/viewMode';
 
-import SlidersHorizontalActive
-  from 'components/Sliders/SlidersHorizontal/SlidersHorizontalActive/SlidersHorizontalActive';
-import SlidersHorizontalItem from 'components/Sliders/SlidersHorizontal/SlidersHorizontalItem/SlidersHorizontalItem';
+import ActiveSlide from 'components/Slider/ActiveSlide/ActiveSlide';
+import Thumbnail from 'components/Slider/Thumbnail/Thumbnail';
 
-import styles from './SlidersHorizontal.module.scss';
+import styles from './Slider.module.scss';
 
 const propTypes = {
   data: PropTypes.arrayOf(PropTypes.shape(
     {
-      title: PropTypes.string.isRequired,
-      thumbnailImgSmall: PropTypes.string.isRequired,
-      thumbnailImgLarge: PropTypes.string.isRequired,
-      imgSmall: PropTypes.string.isRequired,
-      imgLarge: PropTypes.string.isRequired,
-      banner: PropTypes.string.isRequired,
-      category: PropTypes.string.isRequired,
-      id: PropTypes.number.isRequired,
-      description: PropTypes.string.isRequired,
-      link: PropTypes.string.isRequired,
+      gameId: PropTypes.number.isRequired,
     }
-  )).isRequired
+  )).isRequired,
+  type: PropTypes.oneOf(['vertical', 'horizontal']).isRequired
 }
 
 const findNexSlide = (data, activeSlide) => {
-  const findActiveIndex = data.findIndex(item => item.id === activeSlide.id)
+  const findActiveIndex = data.findIndex(item => item.gameId === activeSlide.gameId)
   if (findActiveIndex < data.length - 1) {
     return data[findActiveIndex+1]
   }
@@ -37,7 +28,7 @@ const findNexSlide = (data, activeSlide) => {
   return data[0]
 }
 
-const SlidersHorizontal = ({ data }) => {
+const Slider = ({ data, type }) => {
   const [activeSlide, setActiveSlide] = useState(data[0])
   const [pause, setPause] = useState(false);
   const viewMode = useSelector(viewModeSelector.getViewMode)
@@ -58,26 +49,28 @@ const SlidersHorizontal = ({ data }) => {
   }, [activeSlide, data, pause])
 
   return (
-    <div className={styles.wrapper}>
-      <SlidersHorizontalActive
-        key={activeSlide.id}
+    <div className={classNames(styles.wrapper, styles[type])}>
+      <ActiveSlide
+        key={activeSlide.gameId}
         activeSlide={activeSlide}
         handleClick={handleClickSlide}
         viewMode={viewMode}
+        type={type}
       />
       <div className={styles.thumbnails}>
-        {data.map(item => <SlidersHorizontalItem
-          key={item.id}
-          isActive={item.id === activeSlide.id}
+        {data.map(item => <Thumbnail
+          key={item.gameId}
+          isActive={item.gameId === activeSlide.gameId}
           item={item}
           handleClick={handleClickItem}
           viewMode={viewMode}
+          type={type}
         />)}
       </div>
     </div>
   );
 };
 
-SlidersHorizontal.propTypes = propTypes
+Slider.propTypes = propTypes
 
-export default SlidersHorizontal;
+export default Slider;

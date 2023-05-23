@@ -1,0 +1,159 @@
+@import 'styles/variables';
+
+.wrapper {
+  background-repeat: no-repeat;
+  color: $color-white;
+
+  animation-name: loadBanner;
+  animation-duration: 500ms;
+  animation-timing-function: cubic-bezier(.1,-.6,.2,0);
+
+  .gradient {
+    background: linear-gradient(90deg, rgba(9, 10, 11, 0.7) 0%, rgba(9, 10, 11, 0) 100%);
+    border-radius: 12px 0 0 12px;
+    padding-left: 40px;
+  }
+
+  .banner {
+    margin-bottom: 15px;
+  }
+
+  .content {
+    display: flex;
+    font-size: 14px;
+  }
+
+  .title {
+    margin-top: 20px;
+
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 28px;
+    text-transform: uppercase;
+  }
+
+  .date {
+    margin-top: 10px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-blue;
+  }
+
+  .description {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .moreBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 145px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 15px;
+    text-decoration: none;
+    color: $color-white;
+
+    background-color: $color-blue;
+    border-radius: 12px;
+
+    transition: background-color 100ms ease-in;
+
+    &:hover {
+      background-color: $color-darkBlue;
+    }
+  }
+
+  &.vertical {
+    width: 701px;
+
+    .gradient {
+      width: 250px;
+      height: 373px;
+      padding-top: 47px;
+      padding-right: 90px;
+    }
+
+    .category {
+      padding: 5px 10px;
+
+      color: $color-blue;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 14px;
+
+      background-color: rgba(0, 153, 250, 0.3);
+      border-radius: 12px;
+    }
+
+    .content {
+      color: $color-white;
+    }
+  }
+
+  &.horizontal {
+    .gradient {
+      width: 360px;
+      height: 357px;
+      padding-top: 50px;
+    }
+
+    .category {
+      padding: 5px 15px;
+
+      color: $color-green;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 24px;
+
+      background: rgba(138, 203, 0, 0.3);
+      border-radius: 40px;
+    }
+  }
+}
+
+@keyframes loadBanner {
+  0% { opacity: .4; }
+  100% { opacity: 1; }
+}
+
+@media all and (min-width: 1776px) {
+  .wrapper {
+    &.vertical {
+      width: 1078px;
+
+      .gradient {
+        padding-top: 84px;
+        height: 411px;
+        width: 360px;
+      }
+    }
+
+    &.horizontal {
+      .gradient {
+        padding-top: 55px;
+        height: 352px;
+        width: 550px;
+      }
+    }
+
+    .number {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    .description {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    .moreBtn {
+      margin-top: 20px;
+    }
+  }
+}
