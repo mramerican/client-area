@@ -15,22 +15,32 @@ const propTypes = {
   isActive: PropTypes.bool.isRequired,
   handleClick: PropTypes.func.isRequired,
   viewMode: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(['vertical', 'horizontal']).isRequired
-}
+  type: PropTypes.oneOf(['vertical', 'horizontal']).isRequired,
+};
 const Thumbnail = ({ item, isActive, handleClick, viewMode, type }) => {
-  const imgMode = viewMode === VIEW_MODE.SIMPLE ? 'thumbnailImgSmall' : 'thumbnailImgLarge'
+  const imgMode =
+    viewMode === VIEW_MODE.SIMPLE ? 'thumbnailImgSmall' : 'thumbnailImgLarge';
 
   return (
     <div
-      className={classNames(styles.wrapper, styles[type], {[styles.active]: isActive})}
+      className={classNames(styles.wrapper, styles[type], {
+        [styles.active]: isActive,
+      })}
       onClick={() => handleClick(item)}
     >
       <img src={item[imgMode]} alt="thumbnails img" />
-      {item.thumbnailTitle && <div className={styles.title} dangerouslySetInnerHTML={{__html: item.thumbnailTitle}}></div>}
-      {isActive && <div className={styles.progress}>
-        <div className={styles.processActive}></div>
-        <div className={styles.processProgress}></div>
-      </div>}
+      {item.thumbnailTitle && (
+        <div
+          className={styles.title}
+          dangerouslySetInnerHTML={{ __html: item.thumbnailTitle }}
+        ></div>
+      )}
+      {isActive && (
+        <div className={styles.progress}>
+          <div className={styles.processActive}></div>
+          <div className={styles.processProgress}></div>
+        </div>
+      )}
     </div>
   );
 };

@@ -1,11 +1,7 @@
 import React from 'react';
 
 const PersonalAccount = () => {
-  return (
-    <>
-      Personal Account
-    </>
-  );
+  return <>Personal Account</>;
 };
 
 export default PersonalAccount;

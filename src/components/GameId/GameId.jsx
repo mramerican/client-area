@@ -8,19 +8,19 @@ import styles from './GameId.module.scss';
 
 const propTypes = {
   gameId: PropTypes.number.isRequired,
-  copyStyles: PropTypes.string
-}
+  copyStyles: PropTypes.string,
+};
 
 const defaultProps = {
-  copyStyles: null
-}
+  copyStyles: null,
+};
 
 const GameId = ({ gameId, copyStyles }) => {
-  const [isCopy, setIsCopy] = useState(false)
+  const [isCopy, setIsCopy] = useState(false);
 
   const copyToClipboard = useCallback(() => {
-    navigator.clipboard.writeText(gameId).then(() => setIsCopy(true))
-  }, [gameId])
+    navigator.clipboard.writeText(gameId).then(() => setIsCopy(true));
+  }, [gameId]);
 
   return (
     <span className={styles.wrapper} onClick={copyToClipboard}>
@@ -31,6 +31,6 @@ const GameId = ({ gameId, copyStyles }) => {
   );
 };
 
-GameId.propTypes = propTypes
-GameId.defaultProps = defaultProps
+GameId.propTypes = propTypes;
+GameId.defaultProps = defaultProps;
 export default GameId;

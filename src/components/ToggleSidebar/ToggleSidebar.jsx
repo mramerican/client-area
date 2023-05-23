@@ -6,20 +6,27 @@ import { sidebarSelector, toggleVisible } from 'store/slices/sidebar';
 
 import styles from './ToggleSidebar.module.scss';
 const ToggleSidebar = () => {
-  const dispatch = useDispatch()
-  const isVisible = useSelector(sidebarSelector.getVisible)
+  const dispatch = useDispatch();
+  const isVisible = useSelector(sidebarSelector.getVisible);
 
   const handleClick = useCallback(() => {
-    dispatch(toggleVisible(!isVisible))
+    dispatch(toggleVisible(!isVisible));
     // eslint-disable-next-line
-  }, [isVisible])
+  }, [isVisible]);
 
   return (
     <div
-      className={classNames(styles.wrapper, {[styles.hideSidebar]: !isVisible})}
+      className={classNames(styles.wrapper, {
+        [styles.hideSidebar]: !isVisible,
+      })}
       onClick={handleClick}
     >
-      <div className={classNames({[styles.right]: !isVisible, [styles.left]: isVisible})}></div>
+      <div
+        className={classNames({
+          [styles.right]: !isVisible,
+          [styles.left]: isVisible,
+        })}
+      ></div>
     </div>
   );
 };

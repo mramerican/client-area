@@ -1,11 +1,7 @@
 import React from 'react';
 
 const Support = () => {
-  return (
-    <>
-      Support
-    </>
-  );
+  return <>Support</>;
 };
 
 export default Support;

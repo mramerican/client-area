@@ -8,13 +8,13 @@ import HomeComponentsLayout from 'components/Layouts/HomeComponentsLayout';
 import Item from 'components/pages/Home/ComingSoon/Item/Item';
 
 import { VIEW_MODE } from 'utils/viewMode';
-import { data } from './data'
+import { data } from './data';
 
-import styles from './ComingSoon.module.scss'
+import styles from './ComingSoon.module.scss';
 
 const ComingSoon = () => {
-  const viewMode = useSelector(viewModeSelector.getViewMode)
-  const imgMode = viewMode === VIEW_MODE.SIMPLE ? 'imgSmall' : 'imgLarge'
+  const viewMode = useSelector(viewModeSelector.getViewMode);
+  const imgMode = viewMode === VIEW_MODE.SIMPLE ? 'imgSmall' : 'imgLarge';
 
   return (
     <HomeComponentsLayout
@@ -24,9 +24,9 @@ const ComingSoon = () => {
     >
       <InViewLayout styleClass={styles.fadeInRight}>
         <div className={styles.wrapper}>
-          {data.map((item, index) =>
+          {data.map((item, index) => (
             <Item item={item} imgMode={imgMode} key={index} />
-          )}
+          ))}
         </div>
       </InViewLayout>
     </HomeComponentsLayout>

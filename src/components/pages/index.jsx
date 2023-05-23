@@ -14,59 +14,59 @@ import Search from 'components/pages/Search';
 import Quests from 'components/pages/Quests';
 import Tournaments from 'components/pages/Tournaments';
 
-export const BASE_PATH = '/client-area/'
+export const BASE_PATH = '/client-area/';
 
 export const Pages = {
-  'home': {
+  home: {
     path: BASE_PATH,
-    element: <Home/>
+    element: <Home />,
   },
   'all-games': {
     path: BASE_PATH + 'all-games',
-    element: <AllGames/>
+    element: <AllGames />,
   },
-  'roadmap': {
+  roadmap: {
     path: BASE_PATH + 'roadmap',
-    element: <Roadmap/>
+    element: <Roadmap />,
   },
-  'documentation': {
+  documentation: {
     path: BASE_PATH + 'documentation',
-    element: <Documentation/>
+    element: <Documentation />,
   },
-  'news': {
+  news: {
     path: BASE_PATH + 'news',
-    element: <NewsAndUpdates/>
+    element: <NewsAndUpdates />,
   },
-  'tutorials': {
+  tutorials: {
     path: BASE_PATH + 'tutorials',
-    element: <Tutorials/>
+    element: <Tutorials />,
   },
-  'analytics': {
+  analytics: {
     path: BASE_PATH + 'analytics',
-    element: <Analytics/>
+    element: <Analytics />,
   },
   'brand-assets': {
     path: BASE_PATH + 'brand-assets',
-    element: <EvoplayBrandAssets/>
+    element: <EvoplayBrandAssets />,
   },
-  'support': {
+  support: {
     path: BASE_PATH + 'support',
-    element: <Support/>
+    element: <Support />,
   },
-  'account': {
+  account: {
     path: BASE_PATH + 'account',
-    element: <PersonalAccount/>
+    element: <PersonalAccount />,
   },
-  'quests': {
+  quests: {
     path: BASE_PATH + 'quests',
-    element: <Quests/>
+    element: <Quests />,
   },
-  'tournaments': {
+  tournaments: {
     path: BASE_PATH + 'tournaments',
-    element: <Tournaments/>
+    element: <Tournaments />,
   },
-  'search': {
+  search: {
     path: BASE_PATH + 'search/:searchText',
-    element: <Search/>
-  }
-}
+    element: <Search />,
+  },
+};

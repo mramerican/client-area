@@ -20,9 +20,10 @@ export const data = [
     imgSmall: ImgSlideSmall1,
     imgLarge: ImgSlideLarge1,
     category: 'Quests',
-    description: 'oin us for our Bet Trills Network Tournament and spread the joy of spring to your players! A ray of sunshine - the assortment of our top games - and an energising prize fund will brighten up this spring season.',
+    description:
+      'oin us for our Bet Trills Network Tournament and spread the joy of spring to your players! A ray of sunshine - the assortment of our top games - and an energising prize fund will brighten up this spring season.',
     link: '/',
-    gameId: 1
+    gameId: 1,
   },
   {
     title: 'Bet Trills<br/>Network Quest',
@@ -32,9 +33,10 @@ export const data = [
     imgSmall: ImgSlideSmall2,
     imgLarge: ImgSlideLarge2,
     category: 'Quests',
-    description: 'oin us for our Bet Trills Network Tournament and spread the joy of spring to your players! A ray of sunshine - the assortment of our top games - and an energising prize fund will brighten up this spring season.',
+    description:
+      'oin us for our Bet Trills Network Tournament and spread the joy of spring to your players! A ray of sunshine - the assortment of our top games - and an energising prize fund will brighten up this spring season.',
     link: '/',
-    gameId: 2
+    gameId: 2,
   },
   {
     title: 'Bet Trills<br/>Network Quest',
@@ -44,9 +46,10 @@ export const data = [
     imgSmall: ImgSlideSmall3,
     imgLarge: ImgSlideLarge3,
     category: 'Tournaments',
-    description: 'oin us for our Bet Trills Network Tournament and spread the joy of spring to your players! A ray of sunshine - the assortment of our top games - and an energising prize fund will brighten up this spring season.',
+    description:
+      'oin us for our Bet Trills Network Tournament and spread the joy of spring to your players! A ray of sunshine - the assortment of our top games - and an energising prize fund will brighten up this spring season.',
     link: '/',
-    gameId: 3
+    gameId: 3,
   },
   {
     title: 'Bet Trills<br/>Network Quest',
@@ -56,8 +59,9 @@ export const data = [
     imgSmall: ImgSlideSmall2,
     imgLarge: ImgSlideLarge2,
     category: 'Quests',
-    description: 'oin us for our Bet Trills Network Tournament and spread the joy of spring to your players! A ray of sunshine - the assortment of our top games - and an energising prize fund will brighten up this spring season.',
+    description:
+      'oin us for our Bet Trills Network Tournament and spread the joy of spring to your players! A ray of sunshine - the assortment of our top games - and an energising prize fund will brighten up this spring season.',
     link: '/',
-    gameId: 4
-  }
-]
+    gameId: 4,
+  },
+];

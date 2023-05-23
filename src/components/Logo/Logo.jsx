@@ -12,14 +12,19 @@ import { findPatch } from 'utils/pages';
 import styles from './Logo.module.scss';
 
 const Logo = () => {
-  const isVisibleSidebar = useSelector(sidebarSelector.getVisible)
+  const isVisibleSidebar = useSelector(sidebarSelector.getVisible);
 
   return (
-    <div className={classNames(styles.wrapper, {
-      [styles.hideSidebar]: !isVisibleSidebar
-    })}>
+    <div
+      className={classNames(styles.wrapper, {
+        [styles.hideSidebar]: !isVisibleSidebar,
+      })}
+    >
       <Link to={findPatch('home')}>
-        <img src={isVisibleSidebar ? LogoWitchText : ShortLogo } alt="EvoPlay client area" />
+        <img
+          src={isVisibleSidebar ? LogoWitchText : ShortLogo}
+          alt="EvoPlay client area"
+        />
       </Link>
     </div>
   );

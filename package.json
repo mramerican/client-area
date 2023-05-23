@@ -26,11 +26,12 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "lint": "eslint --fix --max-warnings 0 --ext .js,.jsx ./src"
+    "lint": "eslint --fix --max-warnings 0 --ext .js,.jsx ./src",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "npm run lint npm run format"
     }
   },
   "eslintConfig": {
@@ -44,7 +45,10 @@
   ],
   "devDependencies": {
     "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^5.0.0",
+    "prettier": "^2.8.8"
   }
 }

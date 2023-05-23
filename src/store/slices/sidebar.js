@@ -2,14 +2,17 @@ import { createSlice } from '@reduxjs/toolkit';
 import { getVisible, setVisible } from 'utils/toggleSidebar';
 
 const initialState = {
-  isVisible: getVisible()
-}
+  isVisible: getVisible(),
+};
 
 export const sidebarMiddleware = ({ getState }) => {
-  return next => action => {
+  return (next) => (action) => {
     const result = next(action);
-    if (result.type === 'sidebar/toggleVisible' || result.type === 'sidebar/openSidebar') {
-      setVisible(getState().sidebar.isVisible)
+    if (
+      result.type === 'sidebar/toggleVisible' ||
+      result.type === 'sidebar/openSidebar'
+    ) {
+      setVisible(getState().sidebar.isVisible);
     }
     return result;
   };
@@ -20,20 +23,17 @@ const sidebarSlice = createSlice({
   initialState,
   reducers: {
     toggleVisible: (state, action) => {
-      state.isVisible = action.payload
+      state.isVisible = action.payload;
     },
-    openSidebar: state => {
-      state.isVisible = true
-    }
+    openSidebar: (state) => {
+      state.isVisible = true;
+    },
   },
-})
+});
 
 export const sidebarSelector = {
-  getVisible: state => state.sidebar.isVisible
-}
+  getVisible: (state) => state.sidebar.isVisible,
+};
 
-export const {
-  openSidebar,
-  toggleVisible
-} = sidebarSlice.actions
-export default sidebarSlice.reducer
+export const { openSidebar, toggleVisible } = sidebarSlice.actions;
+export default sidebarSlice.reducer;

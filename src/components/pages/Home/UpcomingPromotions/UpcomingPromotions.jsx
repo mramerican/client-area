@@ -6,11 +6,11 @@ import HomeComponentsLayout from 'components/Layouts/HomeComponentsLayout';
 import Slider from 'components/Slider/Slider';
 
 import { VIEW_MODE } from 'utils/viewMode';
-import { data } from './data'
+import { data } from './data';
 
 const UpcomingPromotions = () => {
-  const viewMode = useSelector(viewModeSelector.getViewMode)
-  const countSize = viewMode === VIEW_MODE.SIMPLE ? 3 : 4
+  const viewMode = useSelector(viewModeSelector.getViewMode);
+  const countSize = viewMode === VIEW_MODE.SIMPLE ? 3 : 4;
 
   return (
     <HomeComponentsLayout

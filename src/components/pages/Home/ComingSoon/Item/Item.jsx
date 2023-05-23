@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from 'components/pages/Home/ComingSoon/Item/Item.module.scss'
+import styles from 'components/pages/Home/ComingSoon/Item/Item.module.scss';
 
 const propTypes = {
   item: PropTypes.shape({
     imgSmall: PropTypes.string.isRequired,
     imgLarge: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    dateRelease: PropTypes.string.isRequired
+    dateRelease: PropTypes.string.isRequired,
   }).isRequired,
-  imgMode: PropTypes.string.isRequired
-}
+  imgMode: PropTypes.string.isRequired,
+};
 
 const Item = ({ item, imgMode }) => {
   return (
@@ -23,5 +23,5 @@ const Item = ({ item, imgMode }) => {
   );
 };
 
-Item.propTypes = propTypes
+Item.propTypes = propTypes;
 export default Item;

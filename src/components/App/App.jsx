@@ -9,15 +9,18 @@ import { Pages } from 'components/pages';
 
 import 'styles/main.scss';
 
-const App = () =>
+const App = () => (
   <AppLayout>
     <Sidebar />
     <ContentLayout>
       <Routes>
-        {Object.keys(Pages).map((key) => <Route {...Pages[key]} key={key} />)}
+        {Object.keys(Pages).map((key) => (
+          <Route {...Pages[key]} key={key} />
+        ))}
       </Routes>
     </ContentLayout>
     <ToggleSidebar />
   </AppLayout>
+);
 
 export default App;

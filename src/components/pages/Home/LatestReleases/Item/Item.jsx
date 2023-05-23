@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import GameId from 'components/GameId/GameId';
 
-import styles from 'components/pages/Home/LatestReleases/Item/Item.module.scss'
+import styles from 'components/pages/Home/LatestReleases/Item/Item.module.scss';
 
 const propTypes = {
   item: PropTypes.shape({
@@ -11,10 +11,10 @@ const propTypes = {
     imgLarge: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
-    id: PropTypes.number.isRequired
+    id: PropTypes.number.isRequired,
   }).isRequired,
-  imgMode: PropTypes.string.isRequired
-}
+  imgMode: PropTypes.string.isRequired,
+};
 
 const Item = ({ item, imgMode }) => {
   return (
@@ -29,5 +29,5 @@ const Item = ({ item, imgMode }) => {
   );
 };
 
-Item.propTypes = propTypes
+Item.propTypes = propTypes;
 export default Item;

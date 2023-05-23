@@ -23,11 +23,11 @@ const propTypes = {
   }).isRequired,
   handleClick: PropTypes.func.isRequired,
   viewMode: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(['vertical', 'horizontal']).isRequired
-}
+  type: PropTypes.oneOf(['vertical', 'horizontal']).isRequired,
+};
 
 const ActiveSlide = ({ activeSlide, handleClick, viewMode, type }) => {
-  const imgMode = viewMode === VIEW_MODE.SIMPLE ? 'imgSmall' : 'imgLarge'
+  const imgMode = viewMode === VIEW_MODE.SIMPLE ? 'imgSmall' : 'imgLarge';
 
   return (
     <div
@@ -36,17 +36,30 @@ const ActiveSlide = ({ activeSlide, handleClick, viewMode, type }) => {
       onClick={handleClick}
     >
       <div className={styles.gradient}>
-        {activeSlide.banner && <img src={activeSlide.banner} alt="active slide" className={styles.banner} />}
+        {activeSlide.banner && (
+          <img
+            src={activeSlide.banner}
+            alt="active slide"
+            className={styles.banner}
+          />
+        )}
         <div className={styles.content}>
           <span className={styles.category}>{activeSlide.category}</span>
           {type === 'vertical' && <GameId gameId={activeSlide.gameId} />}
         </div>
-        {activeSlide.title && <div dangerouslySetInnerHTML={{__html: activeSlide.title}} className={styles.title}></div>}
-        {activeSlide.date && <div className={styles.date}>{activeSlide.date}</div>}
-        <div className={styles.description}>
-          {activeSlide.description}
-        </div>
-        <Link className={styles.moreBtn} to={activeSlide.link}>Learn more</Link>
+        {activeSlide.title && (
+          <div
+            dangerouslySetInnerHTML={{ __html: activeSlide.title }}
+            className={styles.title}
+          ></div>
+        )}
+        {activeSlide.date && (
+          <div className={styles.date}>{activeSlide.date}</div>
+        )}
+        <div className={styles.description}>{activeSlide.description}</div>
+        <Link className={styles.moreBtn} to={activeSlide.link}>
+          Learn more
+        </Link>
       </div>
     </div>
   );

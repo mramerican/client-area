@@ -6,10 +6,10 @@ import sidebarSlice, { sidebarMiddleware } from './slices/sidebar';
 export const store = configureStore({
   reducer: {
     sidebar: sidebarSlice,
-    viewMode: viewModeSlice
+    viewMode: viewModeSlice,
   },
-  middleware: getDefaultMiddleware =>
+  middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(sidebarMiddleware),
-})
+});
 
-export default store
+export default store;

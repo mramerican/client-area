@@ -12,9 +12,9 @@ const propTypes = {
   linkTitle: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ]).isRequired
-}
+    PropTypes.node,
+  ]).isRequired,
+};
 
 const HomeComponentsLayout = ({ title, linkPath, linkTitle, children }) => {
   return (
@@ -28,5 +28,5 @@ const HomeComponentsLayout = ({ title, linkPath, linkTitle, children }) => {
   );
 };
 
-HomeComponentsLayout.propTypes = propTypes
+HomeComponentsLayout.propTypes = propTypes;
 export default HomeComponentsLayout;

@@ -1,10 +1,12 @@
 import React from 'react';
 import styles from './Copyright.module.scss';
 
-const Copyright = () =>
+const Copyright = () => (
   <div className={styles.wrapper}>
-    Evoplay &#169; 2023.<br />
+    Evoplay &#169; 2023.
+    <br />
     All rights reserved.
   </div>
+);
 
 export default Copyright;

@@ -8,15 +8,15 @@ import HomeComponentsLayout from 'components/Layouts/HomeComponentsLayout';
 import Item from 'components/pages/Home/LatestReleases/Item/Item';
 
 import { VIEW_MODE } from 'utils/viewMode';
-import { data } from './data'
+import { data } from './data';
 
-import styles from './LatestReleases.module.scss'
+import styles from './LatestReleases.module.scss';
 
 const LatestReleases = () => {
-  const viewMode = useSelector(viewModeSelector.getViewMode)
+  const viewMode = useSelector(viewModeSelector.getViewMode);
 
-  const imgMode = viewMode === VIEW_MODE.SIMPLE ? 'imgSmall' : 'imgLarge'
-  const countSize = viewMode === VIEW_MODE.SIMPLE ? 5 : 6
+  const imgMode = viewMode === VIEW_MODE.SIMPLE ? 'imgSmall' : 'imgLarge';
+  const countSize = viewMode === VIEW_MODE.SIMPLE ? 5 : 6;
 
   return (
     <HomeComponentsLayout
@@ -26,9 +26,9 @@ const LatestReleases = () => {
     >
       <InViewLayout styleClass={styles.fadeInLeft}>
         <div className={styles.wrapper}>
-          {data.slice(0, countSize).map((item) =>
+          {data.slice(0, countSize).map((item) => (
             <Item item={item} imgMode={imgMode} key={item.id} />
-          )}
+          ))}
         </div>
       </InViewLayout>
     </HomeComponentsLayout>
