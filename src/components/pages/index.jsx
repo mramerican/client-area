@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Analytics from 'components/pages/Analytics';
 import Documentation from 'components/pages/Documentation';
 import EvoplayBrandAssets from 'components/pages/EvoplayBrandAssets';

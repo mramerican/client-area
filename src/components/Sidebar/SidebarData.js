@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { ReactComponent as Home } from 'images/Icons/Home.svg'
 import { ReactComponent as News } from 'images/Icons/News.svg'
 import { ReactComponent as Promotions } from 'images/Icons/Promotions.svg'

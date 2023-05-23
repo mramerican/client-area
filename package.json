@@ -25,7 +25,13 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "lint": "eslint --fix --max-warnings 0 --ext .js,.jsx ./src"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -37,6 +43,8 @@
     "last 3 version"
   ],
   "devDependencies": {
+    "eslint": "^8.41.0",
+    "eslint-plugin-react": "^7.32.2",
     "gh-pages": "^5.0.0"
   }
 }

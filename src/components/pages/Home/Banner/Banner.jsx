@@ -24,7 +24,7 @@ const Banner = () => {
         Find everything you need right at your fingertips: games data, promotion materials, technical documentation, and more!
       </div>
       <div className={styles.bottomTitle}>
-        Let's build the future of <span>iGaming</span> together!
+        Let&#39;s build the future of <span>iGaming</span> together!
       </div>
       <img src={vector} alt="Vector" className={styles.vector} />
     </div>

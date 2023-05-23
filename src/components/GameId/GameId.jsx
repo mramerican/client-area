@@ -19,7 +19,7 @@ const GameId = ({ gameId, copyStyles }) => {
   const [isCopy, setIsCopy] = useState(false)
 
   const copyToClipboard = useCallback(() => {
-    navigator.clipboard.writeText(gameId).then(_ => setIsCopy(true))
+    navigator.clipboard.writeText(gameId).then(() => setIsCopy(true))
   }, [gameId])
 
   return (
