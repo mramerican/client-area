@@ -20,7 +20,6 @@
     "sass": "^1.62.1"
   },
   "scripts": {
-    "prestart": "cp scripts/pre-commit .git/hooks/ && chmod +x .git/hooks/pre-commit && echo 'hook copied'",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -30,6 +29,7 @@
     "lint": "eslint --fix --max-warnings 0 --ext .js,.jsx ./src",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
+  "pre-commit": [ "lint" ],
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -45,6 +45,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "gh-pages": "^5.0.0",
+    "pre-commit": "^1.2.2",
     "prettier": "^2.8.8"
   }
 }
