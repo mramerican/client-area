@@ -1,8 +1,9 @@
-import GameId from 'components/GameId/GameId';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './LatestReleasesItem.module.scss'
+import GameId from 'components/GameId/GameId';
+
+import styles from 'components/pages/Home/LatestReleases/Item/Item.module.scss'
 
 const propTypes = {
   item: PropTypes.shape({
@@ -15,7 +16,7 @@ const propTypes = {
   imgMode: PropTypes.string.isRequired
 }
 
-const LatestReleasesItem = ({ item, imgMode }) => {
+const Item = ({ item, imgMode }) => {
   return (
     <div className={styles.wrapper}>
       <img src={item[imgMode]} alt={item.title} />
@@ -28,5 +29,5 @@ const LatestReleasesItem = ({ item, imgMode }) => {
   );
 };
 
-LatestReleasesItem.propTypes = propTypes
-export default LatestReleasesItem;
+Item.propTypes = propTypes
+export default Item;

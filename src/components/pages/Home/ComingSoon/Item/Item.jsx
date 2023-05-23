@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './ComingSoonItem.module.scss'
+import styles from 'components/pages/Home/ComingSoon/Item/Item.module.scss'
 
 const propTypes = {
   item: PropTypes.shape({
@@ -13,7 +13,7 @@ const propTypes = {
   imgMode: PropTypes.string.isRequired
 }
 
-const ComingSoonItem = ({ item, imgMode }) => {
+const Item = ({ item, imgMode }) => {
   return (
     <div className={styles.wrapper}>
       <img src={item[imgMode]} alt={item.title} />
@@ -23,5 +23,5 @@ const ComingSoonItem = ({ item, imgMode }) => {
   );
 };
 
-ComingSoonItem.propTypes = propTypes
-export default ComingSoonItem;
+Item.propTypes = propTypes
+export default Item;

@@ -5,7 +5,7 @@ import { viewModeSelector } from 'store/slices/viewMode';
 
 import InViewLayout from 'components/Layouts/InViewLayout';
 import HomeComponentsLayout from 'components/Layouts/HomeComponentsLayout';
-import ComingSoonItem from 'components/pages/Home/ComingSoon/ComingSoonItem/ComingSoonItem';
+import Item from 'components/pages/Home/ComingSoon/Item/Item';
 
 import { VIEW_MODE } from 'utils/viewMode';
 import { data } from './data'
@@ -25,7 +25,7 @@ const ComingSoon = () => {
       <InViewLayout styleClass={styles.fadeInRight}>
         <div className={styles.wrapper}>
           {data.map((item, index) =>
-            <ComingSoonItem item={item} imgMode={imgMode} key={index} />
+            <Item item={item} imgMode={imgMode} key={index} />
           )}
         </div>
       </InViewLayout>

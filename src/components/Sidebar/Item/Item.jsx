@@ -6,7 +6,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 
 import { sidebarSelector, openSidebar } from 'store/slices/sidebar';
 
-import styles from './SidebarItem.module.scss'
+import styles from 'components/Sidebar/Item/Item.module.scss'
 
 const propTypes = {
   title: PropTypes.string.isRequired,
@@ -22,8 +22,7 @@ const defaultProps = {
   path: null,
   subNav: null,
 }
-
-const SidebarItem = ({ title, icon, path, subNav }) => {
+const Item = ({ title, icon, path, subNav }) => {
   const dispatch = useDispatch()
   const [subnav, setSubnav] = useState(false)
   const isVisibleSidebar = useSelector(sidebarSelector.getVisible)
@@ -88,7 +87,7 @@ const SidebarItem = ({ title, icon, path, subNav }) => {
   );
 };
 
-SidebarItem.propTypes = propTypes;
-SidebarItem.defaultProps = defaultProps;
+Item.propTypes = propTypes;
+Item.defaultProps = defaultProps;
 
-export default SidebarItem;
+export default Item;

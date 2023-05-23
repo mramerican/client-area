@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import Logo from 'components/Logo/Logo'
 import Search from 'components/Search/Search';
 import Copyright from 'components/Copyrighr/Copyright';
-import SidebarItem from 'components/Sidebar/SidebarItem/SidebarItem';
+import Item from 'components/Sidebar/Item/Item';
 
 import { sidebarSelector } from 'store/slices/sidebar';
 
@@ -21,7 +21,7 @@ const Sidebar = () => {
         <Logo />
         <Search />
         <div>
-          {SidebarData && SidebarData.map((item) => <SidebarItem {...item} key={item.title} />)}
+          {SidebarData && SidebarData.map((item) => <Item {...item} key={item.title} />)}
         </div>
       </div>
       {isVisibleSidebar && <Copyright />}

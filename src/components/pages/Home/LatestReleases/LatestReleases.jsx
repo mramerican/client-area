@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { viewModeSelector } from 'store/slices/viewMode';
 
 import HomeComponentsLayout from 'components/Layouts/HomeComponentsLayout';
-import LatestReleasesItem from 'components/pages/Home/LatestReleases/LatestReleasesItem/LatestReleasesItem';
+import Item from 'components/pages/Home/LatestReleases/Item/Item';
 
 import { VIEW_MODE } from 'utils/viewMode';
 import { data } from './data'
@@ -27,7 +27,7 @@ const LatestReleases = () => {
       <InViewLayout styleClass={styles.fadeInLeft}>
         <div className={styles.wrapper}>
           {data.slice(0, countSize).map((item) =>
-            <LatestReleasesItem item={item} imgMode={imgMode} key={item.id} />
+            <Item item={item} imgMode={imgMode} key={item.id} />
           )}
         </div>
       </InViewLayout>
