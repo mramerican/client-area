@@ -1,7 +1,7 @@
 import React from 'react';
 
 const NewsAndUpdates = () => {
-  return <>News And Updates</>;
+  return <>News and updates</>;
 };
 
 export default NewsAndUpdates;
