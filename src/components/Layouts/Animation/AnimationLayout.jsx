@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import { useInView } from 'react-intersection-observer';
-import styles from 'styles/animation.scss';
+import styles from 'components/Layouts/Animation/AnimationLayout.module.scss';
 
 const propTypes = {
   options: PropTypes.shape({
