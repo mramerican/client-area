@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/client-area/static/css/main.0ddccd84.css",
-    "main.js": "/client-area/static/js/main.077c1989.js",
+    "main.css": "/client-area/static/css/main.eac4ef00.css",
+    "main.js": "/client-area/static/js/main.f288dfd5.js",
     "static/media/img_large3.png": "/client-area/static/media/img_large3.840c241acb36df29328b.png",
     "static/media/Banner_large.png": "/client-area/static/media/Banner_large.14a305babcdef53fd67b.png",
     "static/media/slide6_large.png": "/client-area/static/media/slide6_large.7a6115fb514be6faf85b.png",
@@ -27,9 +27,11 @@
     "static/media/Hind-Bold.ttf": "/client-area/static/media/Hind-Bold.28fe63a8e674a7b964f4.ttf",
     "static/media/Hind-SemiBold.ttf": "/client-area/static/media/Hind-SemiBold.d4287f0934d27e6ac39a.ttf",
     "static/media/Hind-Medium.ttf": "/client-area/static/media/Hind-Medium.7b071c35dbffd711e485.ttf",
+    "static/media/imgLarge.png": "/client-area/static/media/imgLarge.039e600aba5d8da9b1a6.png",
     "static/media/img_large4.png": "/client-area/static/media/img_large4.9dd0d9db96e6a3b5f2b8.png",
     "static/media/img_large6.png": "/client-area/static/media/img_large6.6cf76fbc9ab3e19ebf18.png",
     "static/media/img_large5.png": "/client-area/static/media/img_large5.dea6214b9fd5d8a1c3c4.png",
+    "static/media/imgSmall.png": "/client-area/static/media/imgSmall.d31c2fbbe1b9164466ec.png",
     "static/media/img_small4.png": "/client-area/static/media/img_small4.88e5b94909ca601c08d7.png",
     "static/media/thumbnail_img_large3.png": "/client-area/static/media/thumbnail_img_large3.5639ffb91f67131f5f1b.png",
     "static/media/img_small5.png": "/client-area/static/media/img_small5.521bf7165e087a49d7f0.png",
@@ -39,6 +41,8 @@
     "static/media/thumbnail_img_small1.png": "/client-area/static/media/thumbnail_img_small1.369f086b8b1fd3a6fd12.png",
     "static/media/thumbnail_img_small2.png": "/client-area/static/media/thumbnail_img_small2.babd254f2803c6896825.png",
     "static/media/banner.png": "/client-area/static/media/banner.5808a93dc92dcd7dba17.png",
+    "static/media/img1.png": "/client-area/static/media/img1.4f9b59d9cee72263878e.png",
+    "static/media/img2.png": "/client-area/static/media/img2.fcf23245447cf217ce69.png",
     "static/media/thumbnail_image4_large.png": "/client-area/static/media/thumbnail_image4_large.f004365a1fa2da9c4bed.png",
     "static/media/thumbnail_image1_large.png": "/client-area/static/media/thumbnail_image1_large.cecd598195a886120c40.png",
     "static/media/thumbnail_image5_large.png": "/client-area/static/media/thumbnail_image5_large.6a01906ecadcbe7a682a.png",
@@ -66,11 +70,11 @@
     "static/media/Logo.svg": "/client-area/static/media/Logo.6949606b08c72d8a7e31185963ef62a3.svg",
     "static/media/Search.svg": "/client-area/static/media/Search.17a77064567a7be41c49d0476573c6f5.svg",
     "static/media/ArrowCircle.svg": "/client-area/static/media/ArrowCircle.13ad139101ca8d6c23c1bf828a7378f7.svg",
-    "main.0ddccd84.css.map": "/client-area/static/css/main.0ddccd84.css.map",
-    "main.077c1989.js.map": "/client-area/static/js/main.077c1989.js.map"
+    "main.eac4ef00.css.map": "/client-area/static/css/main.eac4ef00.css.map",
+    "main.f288dfd5.js.map": "/client-area/static/js/main.f288dfd5.js.map"
   },
   "entrypoints": [
-    "static/css/main.0ddccd84.css",
-    "static/js/main.077c1989.js"
+    "static/css/main.eac4ef00.css",
+    "static/js/main.f288dfd5.js"
   ]
 }
