@@ -23,7 +23,7 @@ const findNexSlide = (data, activeSlide) => {
   const findActiveIndex = data.findIndex(
     (item) => item.gameId === activeSlide.gameId,
   );
-  if (findActiveIndex < data.length - 1) {
+  if (findActiveIndex < data.length - 1 && data[findActiveIndex + 1]) {
     return data[findActiveIndex + 1];
   }
 
