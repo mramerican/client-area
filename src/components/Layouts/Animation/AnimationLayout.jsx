@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import { useInView } from 'react-intersection-observer';
+import styles from 'styles/animation.scss';
 
 const propTypes = {
   options: PropTypes.shape({
@@ -13,7 +14,7 @@ const propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
-  styleClass: PropTypes.string.isRequired,
+  animation: PropTypes.string.isRequired,
 };
 
 const defaultProps = {
@@ -23,17 +24,17 @@ const defaultProps = {
   },
 };
 
-const InViewLayout = ({ options, children, styleClass }) => {
+const AnimationLayout = ({ options, children, animation }) => {
   const [ref, inView] = useInView(options);
 
   return (
-    <div ref={ref} className={classNames({ [styleClass]: inView })}>
+    <div ref={ref} className={classNames({ [styles[animation]]: inView })}>
       {children}
     </div>
   );
 };
 
-InViewLayout.propTypes = propTypes;
-InViewLayout.defaultProps = defaultProps;
+AnimationLayout.propTypes = propTypes;
+AnimationLayout.defaultProps = defaultProps;
 
-export default InViewLayout;
+export default AnimationLayout;

@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux';
 
 import { viewModeSelector } from 'store/slices/viewMode';
 
-import InViewLayout from 'components/Layouts/InViewLayout';
-import HomeComponentsLayout from 'components/Layouts/HomeComponentsLayout';
+import AnimationLayout from 'components/Layouts/Animation/AnimationLayout';
+import HomeComponentsLayout from 'components/Layouts/HomeComponents/HomeComponentsLayout';
 import Item from 'components/pages/Home/ComingSoon/Item/Item';
 
 import { VIEW_MODE } from 'utils/viewMode';
@@ -22,13 +22,13 @@ const ComingSoon = () => {
       title="Coming soon"
       linkTitle="Go to Roadmap"
     >
-      <InViewLayout styleClass={styles.fadeInRight}>
+      <AnimationLayout animation="fadeInRight">
         <div className={styles.wrapper}>
           {data.map((item, index) => (
             <Item item={item} imgMode={imgMode} key={index} />
           ))}
         </div>
-      </InViewLayout>
+      </AnimationLayout>
     </HomeComponentsLayout>
   );
 };

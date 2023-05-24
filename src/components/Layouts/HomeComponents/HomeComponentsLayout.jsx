@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { findPatch } from 'utils/pages';
 import ArrowCircleLink from 'components/pages/Home/ArrowCircleLink/ArrowCircleLink';
 
-import styles from './HomeComponentsLayout.module.scss';
+import styles from 'components/Layouts/HomeComponents/HomeComponentsLayout.module.scss';
 
 const propTypes = {
   title: PropTypes.string.isRequired,

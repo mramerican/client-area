@@ -1,6 +1,6 @@
 import React from 'react';
 
-import HomeComponentsLayout from 'components/Layouts/HomeComponentsLayout';
+import HomeComponentsLayout from 'components/Layouts/HomeComponents/HomeComponentsLayout';
 import Slider from 'components/Slider/Slider';
 
 import { data } from 'components/pages/Home/TopPerformers/data';

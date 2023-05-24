@@ -1,10 +1,10 @@
-import InViewLayout from 'components/Layouts/InViewLayout';
+import AnimationLayout from 'components/Layouts/Animation/AnimationLayout';
 import React from 'react';
 import { useSelector } from 'react-redux';
 
 import { viewModeSelector } from 'store/slices/viewMode';
 
-import HomeComponentsLayout from 'components/Layouts/HomeComponentsLayout';
+import HomeComponentsLayout from 'components/Layouts/HomeComponents/HomeComponentsLayout';
 import Item from 'components/pages/Home/LatestReleases/Item/Item';
 
 import { VIEW_MODE } from 'utils/viewMode';
@@ -24,13 +24,13 @@ const LatestReleases = () => {
       title="Latest Releases"
       linkTitle="All Games"
     >
-      <InViewLayout styleClass={styles.fadeInLeft}>
+      <AnimationLayout animation="fadeInLeft">
         <div className={styles.wrapper}>
           {data.slice(0, countSize).map((item) => (
             <Item item={item} imgMode={imgMode} key={item.id} />
           ))}
         </div>
-      </InViewLayout>
+      </AnimationLayout>
     </HomeComponentsLayout>
   );
 };

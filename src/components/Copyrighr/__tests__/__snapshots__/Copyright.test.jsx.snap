@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Copyright initial 1`] = `
+<DocumentFragment>
+  <div
+    class="wrapper"
+  >
+    Evoplay © 2023.
+    <br />
+    All rights reserved.
+  </div>
+</DocumentFragment>
+`;

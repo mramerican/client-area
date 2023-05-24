@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './ContentLayout.module.scss';
+import styles from 'components/Layouts/Content/ContentLayout.module.scss';
 
 const propTypes = {
   children: PropTypes.node.isRequired,

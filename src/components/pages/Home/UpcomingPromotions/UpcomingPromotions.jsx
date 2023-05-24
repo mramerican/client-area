@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { viewModeSelector } from 'store/slices/viewMode';
 
-import HomeComponentsLayout from 'components/Layouts/HomeComponentsLayout';
+import HomeComponentsLayout from 'components/Layouts/HomeComponents/HomeComponentsLayout';
 import Slider from 'components/Slider/Slider';
 
 import { VIEW_MODE } from 'utils/viewMode';

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import AppLayout from 'components/Layouts/AppLayout';
-import ContentLayout from 'components/Layouts/ContentLayout';
+import AppLayout from 'components/Layouts/App/AppLayout';
+import ContentLayout from 'components/Layouts/Content/ContentLayout';
 import Sidebar from 'components/Sidebar/Sidebar';
 import ToggleSidebar from 'components/ToggleSidebar/ToggleSidebar';
 import { Pages } from 'components/pages';

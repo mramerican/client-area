@@ -8,7 +8,7 @@ import { sidebarSelector } from 'store/slices/sidebar';
 import { setViewMode } from 'store/slices/viewMode';
 import { getViewMode } from 'utils/viewMode';
 
-import styles from './AppLayout.module.scss';
+import styles from 'components/Layouts/App/AppLayout.module.scss';
 
 const propTypes = {
   children: PropTypes.node.isRequired,
