@@ -5,6 +5,7 @@ import TopPerformers from 'components/pages/Home/TopPerformers/TopPerformers';
 import LatestReleases from 'components/pages/Home/LatestReleases/LatestReleases';
 import ComingSoon from 'components/pages/Home/ComingSoon/ComingSoon';
 import UpcomingPromotions from 'components/pages/Home/UpcomingPromotions/UpcomingPromotions';
+import News from 'components/pages/Home/News/News';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <LatestReleases />
       <ComingSoon />
       <UpcomingPromotions />
+      <News />
     </>
   );
 };

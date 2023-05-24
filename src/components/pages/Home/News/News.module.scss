@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.newsItems {
+  width: 460px;
+}
+
+@media all and (min-width: 1776px) {
+  .newsItems {
+    width: 709px;
+  }
+}

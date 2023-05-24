@@ -1,0 +1,43 @@
+@import 'styles/variables';
+
+.wrapper {
+  border-radius: 12px;
+  cursor: pointer;
+  width: 460px;
+
+  img {
+    border-radius: 12px;
+  }
+
+  &:hover {
+    background-color: $background-lightGrey;
+  }
+}
+
+.content {
+  padding: 20px 15px 10px 15px;
+}
+
+.description {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+
+  color: $color-dark;
+}
+
+.date {
+  margin-top: 10px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  color: $color-grey;
+}
+
+@media all and (min-width: 1776px) {
+  .wrapper {
+    width: 712px;
+  }
+}
