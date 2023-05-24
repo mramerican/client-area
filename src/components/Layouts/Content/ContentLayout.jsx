@@ -8,7 +8,8 @@ const propTypes = {
 };
 const ContentLayout = ({ children }) => (
   <div className={styles.wrapper}>
-    <div className={styles.content}>{children}</div>
+    {children}
+    {/*<div className={styles.content}>{children}</div>*/}
   </div>
 );
 

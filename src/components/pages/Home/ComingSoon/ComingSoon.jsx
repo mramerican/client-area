@@ -21,9 +21,11 @@ const ComingSoon = () => {
       linkPath="roadmap"
       title="Coming soon"
       linkTitle="Go to Roadmap"
+      styleWrapper={styles.wrapper}
+      styleHeader={styles.header}
     >
       <AnimationLayout animation="fadeInRight">
-        <div className={styles.wrapper}>
+        <div className={styles.content}>
           {data.map((item, index) => (
             <Item item={item} imgMode={imgMode} key={index} />
           ))}

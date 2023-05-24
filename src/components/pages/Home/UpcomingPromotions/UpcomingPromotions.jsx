@@ -8,6 +8,8 @@ import Slider from 'components/Slider/Slider';
 import { VIEW_MODE } from 'utils/viewMode';
 import { data } from './data';
 
+import styles from './UpcomingPromotions.module.scss';
+
 const UpcomingPromotions = () => {
   const viewMode = useSelector(viewModeSelector.getViewMode);
   const countSize = viewMode === VIEW_MODE.SIMPLE ? 3 : 4;
@@ -17,8 +19,12 @@ const UpcomingPromotions = () => {
       title="Upcoming Promotions"
       linkPath="tournaments"
       linkTitle="All Promotions"
+      styleWrapper={styles.wrapper}
+      styleHeader={styles.header}
     >
-      <Slider data={data.slice(0, countSize)} type="horizontal" />
+      <div className={styles.content}>
+        <Slider data={data.slice(0, countSize)} type="horizontal" />
+      </div>
     </HomeComponentsLayout>
   );
 };

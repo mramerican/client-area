@@ -23,9 +23,11 @@ const LatestReleases = () => {
       linkPath="all-games"
       title="Latest Releases"
       linkTitle="All Games"
+      styleWrapper={styles.wrapper}
+      styleHeader={styles.header}
     >
       <AnimationLayout animation="fadeInLeft">
-        <div className={styles.wrapper}>
+        <div className={styles.content}>
           {data.slice(0, countSize).map((item) => (
             <Item item={item} imgMode={imgMode} key={item.id} />
           ))}
