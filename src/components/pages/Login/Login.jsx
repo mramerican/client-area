@@ -18,7 +18,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setToken(JSON.stringify({ username, password }), remember);
-    navigate(findPatchPages('home'));
+    navigate(findPatchPages('home'), { replace: true });
   };
 
   return (

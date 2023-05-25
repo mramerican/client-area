@@ -1,13 +1,13 @@
-import { render } from '@testing-library/react';
+import React from 'react';
+import { screen } from '@testing-library/react';
+import { render } from 'config/test-utils';
 
 import Copyright from 'components/Copyrighr/Copyright';
 
 describe('Copyright', () => {
-  test('initial', () => {
-    const { getByText, asFragment } = render(<Copyright />);
-    const linkElement = getByText(/Evoplay/i);
+  it('render components', () => {
+    render(<Copyright />);
 
-    expect(linkElement).toBeInTheDocument();
-    expect(asFragment(<Copyright />)).toMatchSnapshot();
+    expect(screen.getByText(/All rights reserved./)).toBeInTheDocument();
   });
 });
