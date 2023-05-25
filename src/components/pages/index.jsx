@@ -1,6 +1,8 @@
 import React from 'react';
 
-import Login from 'components/Login/Login';
+import Login from 'components/pages/Login/Login';
+import RestorePassword from 'components/pages/RestorePassword/RestorePassword';
+import RestoreSuccess from 'components/pages/RestoreSuccess/RestoreSuccess';
 
 import Analytics from 'components/pages/Analytics';
 import Documentation from 'components/pages/Documentation';
@@ -77,5 +79,13 @@ export const LoginPages = {
   login: {
     path: BASE_PATH + 'login',
     element: <Login />,
+  },
+  restore: {
+    path: BASE_PATH + 'restore',
+    element: <RestorePassword />,
+  },
+  'restore-success': {
+    path: BASE_PATH + 'restore-success',
+    element: <RestoreSuccess />,
   },
 };

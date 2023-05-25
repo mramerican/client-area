@@ -8,4 +8,3 @@ export const setToken = (token) => {
 
   localStorage.setItem(STORAGE_TOKEN, token);
 };
-export const getIsLoggedIn = () => Boolean(getToken());

@@ -1,0 +1,43 @@
+@import "styles/variables";
+
+.icon {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1));
+  width: 75px;
+  height: 75px;
+  border: 2px solid $color-blue;;
+  border-radius: 100px;
+  margin: 0 auto 30px;
+
+  &::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    left: 16px;
+    top: -1px;
+    width: 23px;
+    height: 35px;
+    border-color: $color-blue;
+    border-width: 0 3px 3px 0;
+    border-style: solid;
+    transform-origin: bottom left;
+    transform: rotate(45deg)
+  }
+}
+
+.subTitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  text-align: center;
+  color: $color-grey;
+  margin: 20px 0;
+}
+
+.submit {
+  width: 376px;
+}

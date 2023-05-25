@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { findPatch } from 'utils/pages';
+import { findPatchPages } from 'utils/pages';
 import ArrowCircleLink from 'components/pages/Home/ArrowCircleLink/ArrowCircleLink';
 
 import styles from 'components/Layouts/HomeComponents/HomeComponentsLayout.module.scss';
@@ -36,7 +36,7 @@ const HomeComponentsLayout = ({
     <div className={classNames(styles.wrapper, styleWrapper)}>
       <div className={classNames(styles.header, styleHeader)}>
         <div className={styles.title}>{title}</div>
-        <ArrowCircleLink title={linkTitle} path={findPatch(linkPath)} />
+        <ArrowCircleLink title={linkTitle} path={findPatchPages(linkPath)} />
       </div>
       {children}
     </div>

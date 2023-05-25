@@ -8,7 +8,7 @@
 
   height: 100vh;
 
-  background-color: $background-dark;
+  background-color: $color-dark;
   color: $color-white;
 }
 
@@ -19,4 +19,56 @@
 
 .content {
   width: 426px;
+}
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.item {
+  margin-bottom: 25px;
+  display: block;
+
+  &Title {
+    color: $color-grey;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  input {
+    width: 386px;
+    padding: 13px 20px;
+    margin: 0;
+    border: none;
+    background-color: $color-lightGrey;
+    border-radius: 12px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.submit {
+  display: block;
+
+  text-align: center;
+  width: 100%;
+  border-radius: 12px;
+  background-color: $color-blue;
+  color: $color-white;
+  border: none;
+  padding: 16px 25px;
+  text-decoration: none;
+
+  cursor: pointer;
 }

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 
-import { getIsLoggedIn } from 'utils/auth';
+import useToken from 'hooks/auth';
 import { getRoutPatch } from 'utils/route';
 
 const propTypes = {
@@ -11,15 +11,15 @@ const propTypes = {
 
 const PrivateRoutes = ({ Component }) => {
   const navigate = useNavigate();
-  const isLoggedIn = getIsLoggedIn();
+  const { token } = useToken();
 
   useEffect(() => {
-    if (!isLoggedIn) {
+    if (!token) {
       navigate(getRoutPatch('login'));
     }
   }, [navigate]);
 
-  return isLoggedIn ? <Component /> : null;
+  return token ? <Component /> : null;
 };
 
 PrivateRoutes.propTypes = propTypes;

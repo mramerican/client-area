@@ -2,7 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 
 import viewModeSlice from 'store/slices/viewMode';
 import sidebarSlice, { sidebarMiddleware } from './slices/sidebar';
-import authSlice, { authMiddleware } from 'store/slices/auth';
+import authSlice from 'store/slices/auth';
 
 export const store = configureStore({
   reducer: {
@@ -11,7 +11,7 @@ export const store = configureStore({
     auth: authSlice,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(sidebarMiddleware, authMiddleware),
+    getDefaultMiddleware().concat(sidebarMiddleware),
 });
 
 export default store;

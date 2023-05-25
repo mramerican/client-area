@@ -7,7 +7,7 @@ import LogoWitchText from 'images/Logo/LogoWitchText.svg';
 import ShortLogo from 'images/Logo/Logo.svg';
 
 import { sidebarSelector } from 'store/slices/sidebar';
-import { findPatch } from 'utils/pages';
+import { findPatchPages } from 'utils/pages';
 
 import styles from './Logo.module.scss';
 
@@ -20,7 +20,7 @@ const Logo = () => {
         [styles.hideSidebar]: !isVisibleSidebar,
       })}
     >
-      <Link to={findPatch('home')}>
+      <Link to={findPatchPages('home')}>
         <img
           src={isVisibleSidebar ? LogoWitchText : ShortLogo}
           alt="EvoPlay client area"
