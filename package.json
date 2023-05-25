@@ -1,5 +1,5 @@
 {
-  "homepage": "http://mramerican.github.io/client-area",
+  "homepage": "http://mramerican.github.io/client-area/home",
   "name": "client-area",
   "version": "0.0.1",
   "private": true,
@@ -24,7 +24,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "lint": "eslint --fix --max-warnings 0 --ext .js,.jsx ./src",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    "format": "prettier --write './**/*.{js,jsx,css,json}' --config ./.prettierrc"
   },
   "eslintConfig": {
     "extends": [

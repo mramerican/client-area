@@ -1,0 +1,22 @@
+@import 'styles/variables';
+
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+
+  background-color: $background-dark;
+  color: $color-white;
+}
+
+.logo {
+  position: absolute;
+  top: 130px;
+}
+
+.content {
+  width: 426px;
+}

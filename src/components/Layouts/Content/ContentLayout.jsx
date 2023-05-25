@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 import styles from 'components/Layouts/Content/ContentLayout.module.scss';
 
 const propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
 };
 const ContentLayout = ({ children }) => (
   <div className={styles.wrapper}>

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Login from 'components/Login/Login';
+
 import Analytics from 'components/pages/Analytics';
 import Documentation from 'components/pages/Documentation';
 import EvoplayBrandAssets from 'components/pages/EvoplayBrandAssets';
@@ -16,57 +18,64 @@ import Tournaments from 'components/pages/Tournaments';
 
 export const BASE_PATH = '/client-area/';
 
-export const Pages = {
+export const PrivatePages = {
   home: {
-    path: BASE_PATH,
-    element: <Home />,
+    path: BASE_PATH + 'home',
+    element: Home,
   },
   'all-games': {
     path: BASE_PATH + 'all-games',
-    element: <AllGames />,
+    element: AllGames,
   },
   roadmap: {
     path: BASE_PATH + 'roadmap',
-    element: <Roadmap />,
+    element: Roadmap,
   },
   documentation: {
     path: BASE_PATH + 'documentation',
-    element: <Documentation />,
+    element: Documentation,
   },
   news: {
     path: BASE_PATH + 'news',
-    element: <NewsAndUpdates />,
+    element: NewsAndUpdates,
   },
   tutorials: {
     path: BASE_PATH + 'tutorials',
-    element: <Tutorials />,
+    element: Tutorials,
   },
   analytics: {
     path: BASE_PATH + 'analytics',
-    element: <Analytics />,
+    element: Analytics,
   },
   'brand-assets': {
     path: BASE_PATH + 'brand-assets',
-    element: <EvoplayBrandAssets />,
+    element: EvoplayBrandAssets,
   },
   support: {
     path: BASE_PATH + 'support',
-    element: <Support />,
+    element: Support,
   },
   account: {
     path: BASE_PATH + 'account',
-    element: <PersonalAccount />,
+    element: PersonalAccount,
   },
   quests: {
     path: BASE_PATH + 'quests',
-    element: <Quests />,
+    element: Quests,
   },
   tournaments: {
     path: BASE_PATH + 'tournaments',
-    element: <Tournaments />,
+    element: Tournaments,
   },
   search: {
     path: BASE_PATH + 'search/:searchText',
-    element: <Search />,
+    element: Search,
+  },
+};
+
+export const LoginPages = {
+  login: {
+    path: BASE_PATH + 'login',
+    element: <Login />,
   },
 };

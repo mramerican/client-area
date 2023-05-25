@@ -1,3 +1,4 @@
-import { Pages } from 'components/pages';
+import { PrivatePages } from 'components/pages';
 
-export const findPatch = (id) => (Pages[id] ? Pages[id].path : '/');
+export const findPatch = (id) =>
+  PrivatePages[id] ? PrivatePages[id].path : '/home';

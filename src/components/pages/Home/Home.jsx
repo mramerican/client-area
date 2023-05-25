@@ -7,17 +7,15 @@ import ComingSoon from 'components/pages/Home/ComingSoon/ComingSoon';
 import UpcomingPromotions from 'components/pages/Home/UpcomingPromotions/UpcomingPromotions';
 import News from 'components/pages/Home/News/News';
 
-const Home = () => {
-  return (
-    <>
-      <Banner />
-      <TopPerformers />
-      <LatestReleases />
-      <ComingSoon />
-      <UpcomingPromotions />
-      <News />
-    </>
-  );
-};
+const Home = () => (
+  <>
+    <Banner />
+    <TopPerformers />
+    <LatestReleases />
+    <ComingSoon />
+    <UpcomingPromotions />
+    <News />
+  </>
+);
 
 export default Home;

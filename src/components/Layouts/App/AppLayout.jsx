@@ -11,7 +11,10 @@ import { getViewMode } from 'utils/viewMode';
 import styles from 'components/Layouts/App/AppLayout.module.scss';
 
 const propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
 };
 const AppLayout = ({ children }) => {
   const dispatch = useDispatch();
