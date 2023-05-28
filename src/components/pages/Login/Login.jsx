@@ -10,7 +10,7 @@ import stylesLayout from 'components/Layouts/Login/LoginLayout.module.scss';
 const Login = () => {
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
-  const [remember, setRemember] = useState(false);
+  const [remember, setRemember] = useState(true);
 
   const { setToken } = useToken();
   const navigate = useNavigate();
