@@ -13,7 +13,7 @@ import PersonalAccount from 'components/pages/PersonalAccount';
 import Support from 'components/pages/Support';
 import Tutorials from 'components/pages/Tutorials';
 import Roadmap from 'components/pages/Roadmap';
-import AllGames from 'components/pages/AllGames';
+import AllGames from 'components/pages/AllGames/AllGames';
 import Search from 'components/pages/Search';
 import Quests from 'components/pages/Quests';
 import Tournaments from 'components/pages/Tournaments';

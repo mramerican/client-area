@@ -11,6 +11,59 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <style>
+          .title {
+              margin-top: 150px;
+              font-size: 30px;
+              line-height: 24px;
+          }
+          .subTitle {
+              font-size: 15px;
+              line-height: 16px;
+              color: #888B8D;
+          }
+          .title, .subTitle {
+              text-align: center;
+          }
+          .loader {
+              margin: 50px auto;
+              text-indent: -9999em;
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+              background: linear-gradient(to left, #0099FA 20%, #FFFFFF 80%);
+              position: relative;
+              animation: load 1.4s infinite linear;
+              transform: translateZ(0);
+          }
+
+          .loader:after {
+              background: #FFFFFF;
+              width: 85%;
+              height: 85%;
+              border-radius: 50%;
+              content: '';
+              margin: auto;
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+          }
+
+          @keyframes load {
+              0% {
+                  transform: rotate(0deg);
+              }
+              100% {
+                  transform: rotate(360deg);
+              }
+          }
+      </style>
+      <div class="title">EVOPLAY</div>
+      <div class="subTitle">CLIENT AREA</div>
+      <div class="loader"></div>
+    </div>
   </body>
 </html>

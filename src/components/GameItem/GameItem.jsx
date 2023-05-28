@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import GameId from 'components/GameId/GameId';
 
-import styles from 'components/pages/Home/LatestReleases/Item/Item.module.scss';
+import styles from 'components/GameItem/GameItem.module.scss';
 
 const propTypes = {
   item: PropTypes.shape({
@@ -16,7 +16,7 @@ const propTypes = {
   imgMode: PropTypes.string.isRequired,
 };
 
-const Item = ({ item, imgMode }) => {
+const GameItem = ({ item, imgMode }) => {
   return (
     <div className={styles.wrapper}>
       <img src={item[imgMode]} alt={item.title} />
@@ -29,5 +29,5 @@ const Item = ({ item, imgMode }) => {
   );
 };
 
-Item.propTypes = propTypes;
-export default Item;
+GameItem.propTypes = propTypes;
+export default GameItem;
