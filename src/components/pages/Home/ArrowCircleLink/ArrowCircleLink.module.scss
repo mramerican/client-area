@@ -26,4 +26,7 @@
   &:hover circle {
     stroke-dashoffset: 0;
   }
+  &:hover {
+    text-decoration: underline;
+  }
 }

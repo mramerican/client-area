@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 import HomeComponentsLayout from 'components/Layouts/HomeComponents/HomeComponentsLayout';
+import AnimationLayout from 'components/Layouts/Animation/AnimationLayout';
 import Main from 'components/pages/Home/News/Main/Main';
 import Item from 'components/pages/Home/News/Item/Item';
 
@@ -22,19 +23,21 @@ const News = () => {
       title="News and Updates"
       linkTitle="All News"
     >
-      <div className={styles.wrapper}>
-        <Main />
-        <div className={styles.newsItems}>
-          {news.slice(0, countSize).map((item, index) => (
-            <Item
-              key={index}
-              date={item.date}
-              img={item.img}
-              description={item.description}
-            />
-          ))}
+      <AnimationLayout animation="fadeInUp">
+        <div className={styles.wrapper}>
+          <Main />
+          <div className={styles.newsItems}>
+            {news.slice(0, countSize).map((item, index) => (
+              <Item
+                key={index}
+                date={item.date}
+                img={item.img}
+                description={item.description}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      </AnimationLayout>
     </HomeComponentsLayout>
   );
 };

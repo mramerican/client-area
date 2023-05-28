@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { viewModeSelector } from 'store/slices/viewMode';
 
 import HomeComponentsLayout from 'components/Layouts/HomeComponents/HomeComponentsLayout';
+import AnimationLayout from 'components/Layouts/Animation/AnimationLayout';
 import Slider from 'components/Slider/Slider';
 
 import { VIEW_MODE } from 'utils/viewMode';
@@ -22,9 +23,11 @@ const UpcomingPromotions = () => {
       styleWrapper={styles.wrapper}
       styleHeader={styles.header}
     >
-      <div className={styles.content}>
-        <Slider data={data.slice(0, countSize)} type="horizontal" />
-      </div>
+      <AnimationLayout animation="fadeInUp">
+        <div className={styles.content}>
+          <Slider data={data.slice(0, countSize)} type="horizontal" />
+        </div>
+      </AnimationLayout>
     </HomeComponentsLayout>
   );
 };
