@@ -71,4 +71,10 @@
   text-decoration: none;
 
   cursor: pointer;
+
+  transition: background-color 100ms ease-in;
+
+  &:hover {
+    background-color: $color-darkBlue;
+  }
 }
