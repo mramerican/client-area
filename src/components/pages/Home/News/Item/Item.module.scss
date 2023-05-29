@@ -14,10 +14,15 @@
 
   img {
     border-radius: 12px;
+    width: 168px;
   }
 
   &:hover {
     background-color: $color-lightGrey;
+
+    .description {
+      text-decoration: underline;
+    }
   }
 }
 

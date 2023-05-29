@@ -12,6 +12,10 @@
 
   &:hover {
     background-color: $color-lightGrey;
+
+    .description {
+      text-decoration: underline;
+    }
   }
 }
 
