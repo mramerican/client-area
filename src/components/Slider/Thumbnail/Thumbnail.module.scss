@@ -53,12 +53,20 @@
       margin-bottom: 0;
     }
 
+    img {
+      height: 60px;
+    }
+
     .progress {
       z-index: 0;
     }
   }
 
   &.horizontal {
+    img {
+      width: 300px;
+    }
+
     .progress {
       z-index: 2;
       overflow: hidden;
@@ -90,6 +98,16 @@
 
 @media all and (min-width: 1776px) {
   .wrapper {
-    margin-bottom: 10px;
+    &.vertical {
+      margin-bottom: 10px;
+
+      img {
+        height: 74px;
+      }
+    }
+
+    &.horizontal img {
+      width: 346px;
+    }
   }
 }

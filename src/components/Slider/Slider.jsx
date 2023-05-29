@@ -66,7 +66,6 @@ const Slider = ({ data, type }) => {
             isActive={item.gameId === activeSlide.gameId}
             item={item}
             handleClick={handleClickItem}
-            viewMode={viewMode}
             type={type}
           />
         ))}
