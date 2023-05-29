@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/client-area/static/css/main.fe43f121.css",
-    "main.js": "/client-area/static/js/main.87f282bf.js",
+    "main.css": "/client-area/static/css/main.6ce4fe06.css",
+    "main.js": "/client-area/static/js/main.31f75120.js",
     "static/media/img_large3.png": "/client-area/static/media/img_large3.840c241acb36df29328b.png",
     "static/media/Banner_large.png": "/client-area/static/media/Banner_large.14a305babcdef53fd67b.png",
     "static/media/slide6_large.png": "/client-area/static/media/slide6_large.7a6115fb514be6faf85b.png",
@@ -31,15 +31,11 @@
     "static/media/img_large4.png": "/client-area/static/media/img_large4.9dd0d9db96e6a3b5f2b8.png",
     "static/media/img_large6.png": "/client-area/static/media/img_large6.6cf76fbc9ab3e19ebf18.png",
     "static/media/img_large5.png": "/client-area/static/media/img_large5.dea6214b9fd5d8a1c3c4.png",
-    "static/media/imgSmall.png": "/client-area/static/media/imgSmall.d31c2fbbe1b9164466ec.png",
     "static/media/img_small4.png": "/client-area/static/media/img_small4.88e5b94909ca601c08d7.png",
     "static/media/thumbnail_img_large3.png": "/client-area/static/media/thumbnail_img_large3.5639ffb91f67131f5f1b.png",
     "static/media/img_small5.png": "/client-area/static/media/img_small5.521bf7165e087a49d7f0.png",
     "static/media/thumbnail_img_large2.png": "/client-area/static/media/thumbnail_img_large2.09fcdd5449c964f3fac1.png",
     "static/media/thumbnail_img_large1.png": "/client-area/static/media/thumbnail_img_large1.0eec492936d35dcc61b9.png",
-    "static/media/thumbnail_img_small3.png": "/client-area/static/media/thumbnail_img_small3.04379f1399ee99a27a46.png",
-    "static/media/thumbnail_img_small1.png": "/client-area/static/media/thumbnail_img_small1.369f086b8b1fd3a6fd12.png",
-    "static/media/thumbnail_img_small2.png": "/client-area/static/media/thumbnail_img_small2.babd254f2803c6896825.png",
     "static/media/banner.png": "/client-area/static/media/banner.5808a93dc92dcd7dba17.png",
     "static/media/img1.png": "/client-area/static/media/img1.4f9b59d9cee72263878e.png",
     "static/media/img2.png": "/client-area/static/media/img2.fcf23245447cf217ce69.png",
@@ -49,11 +45,6 @@
     "static/media/thumbnail_image6_large.png": "/client-area/static/media/thumbnail_image6_large.47d05f8c2f3c1a74ebbe.png",
     "static/media/thumbnail_image3_large.png": "/client-area/static/media/thumbnail_image3_large.fc6befcb24b8a692ad09.png",
     "static/media/thumbnail_image2_large.png": "/client-area/static/media/thumbnail_image2_large.4683e1c4f9d1052808f8.png",
-    "static/media/thumbnail_image4_small.png": "/client-area/static/media/thumbnail_image4_small.592912ae80e954c4db62.png",
-    "static/media/thumbnail_image1_small.png": "/client-area/static/media/thumbnail_image1_small.80a7743dbc988f831123.png",
-    "static/media/thumbnail_image5_small.png": "/client-area/static/media/thumbnail_image5_small.7e7013454a9da15ef60b.png",
-    "static/media/thumbnail_image6_small.png": "/client-area/static/media/thumbnail_image6_small.9966482132e9775a0ab8.png",
-    "static/media/thumbnail_image3_small.png": "/client-area/static/media/thumbnail_image3_small.26e7059f9787ab4c3c5d.png",
     "static/media/LogoWitchText.svg": "/client-area/static/media/LogoWitchText.d9686923c0fc19f72e67ebfdc22f1c4a.svg",
     "static/media/Promotions.svg": "/client-area/static/media/Promotions.39a4fad642bbb4223bccf3c2243b74dd.svg",
     "static/media/Analytics.svg": "/client-area/static/media/Analytics.f8c69e5f097848df383019dcd5c1277d.svg",
@@ -70,11 +61,11 @@
     "static/media/Logo.svg": "/client-area/static/media/Logo.6949606b08c72d8a7e31185963ef62a3.svg",
     "static/media/Search.svg": "/client-area/static/media/Search.17a77064567a7be41c49d0476573c6f5.svg",
     "static/media/ArrowCircle.svg": "/client-area/static/media/ArrowCircle.13ad139101ca8d6c23c1bf828a7378f7.svg",
-    "main.fe43f121.css.map": "/client-area/static/css/main.fe43f121.css.map",
-    "main.87f282bf.js.map": "/client-area/static/js/main.87f282bf.js.map"
+    "main.6ce4fe06.css.map": "/client-area/static/css/main.6ce4fe06.css.map",
+    "main.31f75120.js.map": "/client-area/static/js/main.31f75120.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe43f121.css",
-    "static/js/main.87f282bf.js"
+    "static/css/main.6ce4fe06.css",
+    "static/js/main.31f75120.js"
   ]
 }
