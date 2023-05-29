@@ -1,9 +1,9 @@
-import AnimationLayout from 'components/Layouts/Animation/AnimationLayout';
 import React from 'react';
 import { useSelector } from 'react-redux';
 
 import { viewModeSelector } from 'store/slices/viewMode';
 
+import AnimationLayout from 'components/Layouts/Animation/AnimationLayout';
 import HomeComponentsLayout from 'components/Layouts/HomeComponents/HomeComponentsLayout';
 import GameItem from 'components/GameItem/GameItem';
 
@@ -14,8 +14,6 @@ import styles from './LatestReleases.module.scss';
 
 const LatestReleases = () => {
   const viewMode = useSelector(viewModeSelector.getViewMode);
-
-  const imgMode = viewMode === VIEW_MODE.SIMPLE ? 'imgSmall' : 'imgLarge';
   const countSize = viewMode === VIEW_MODE.SIMPLE ? 5 : 6;
 
   return (
@@ -29,7 +27,11 @@ const LatestReleases = () => {
       <AnimationLayout animation="fadeInLeft">
         <div className={styles.content}>
           {data.slice(0, countSize).map((item) => (
-            <GameItem item={item} imgMode={imgMode} key={item.id} />
+            <GameItem
+              key={item.id}
+              item={item}
+              style={styles.gameItemWrapper}
+            />
           ))}
         </div>
       </AnimationLayout>

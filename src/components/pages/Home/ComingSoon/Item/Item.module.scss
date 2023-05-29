@@ -10,6 +10,11 @@
     background-color: $color-white;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   }
+
+  img {
+    width: 302px;
+    border-radius: 12px;
+  }
 }
 
 .title {
@@ -32,5 +37,9 @@
 @media all and (min-width: 1776px) {
   .wrapper {
     width: 468px;
+
+    img {
+      width: 468px;
+    }
   }
 }

@@ -15,8 +15,16 @@
   justify-content: space-between;
 }
 
+.gameItemWrapper img {
+  width: 172px;
+}
+
 @media all and (min-width: 1776px) {
   .wrapper {
     width: 1461px;
+  }
+
+  .gameItemWrapper img {
+    width: 223px;
   }
 }

@@ -1,26 +1,20 @@
-import ImgSmall1 from 'images/HomePage/ComingSoon/img_small1.png';
-import ImgLarge1 from 'images/HomePage/ComingSoon/img_large1.png';
-import ImgSmall2 from 'images/HomePage/ComingSoon/img_small2.png';
-import ImgLarge2 from 'images/HomePage/ComingSoon/img_large2.png';
-import ImgSmall3 from 'images/HomePage/ComingSoon/img_small3.png';
-import ImgLarge3 from 'images/HomePage/ComingSoon/img_large3.png';
+import Img1 from 'images/HomePage/ComingSoon/X_Demon_446x186.jpg';
+import Img2 from 'images/HomePage/ComingSoon/moneyminterbonusbuy_446x186.jpg';
+import Img3 from 'images/HomePage/ComingSoon/ruedadechilebonusbuy_446x186.jpg';
 
 export const data = [
   {
-    imgSmall: ImgSmall1,
-    imgLarge: ImgLarge1,
+    img: Img1,
     title: 'X-Demon',
     dateRelease: '26 MAY 2023',
   },
   {
-    imgSmall: ImgSmall2,
-    imgLarge: ImgLarge2,
+    img: Img3,
     title: 'Funny Hunting',
     dateRelease: '1 Jun 2023',
   },
   {
-    imgSmall: ImgSmall3,
-    imgLarge: ImgLarge3,
+    img: Img2,
     title: 'Sold it!',
     dateRelease: '8 Jun 2023',
   },
