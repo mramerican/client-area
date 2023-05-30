@@ -18,6 +18,10 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  &.loading {
+    padding-bottom: 0;
+  }
 }
 
 @media all and (min-width: 1776px) {

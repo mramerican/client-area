@@ -1,12 +1,10 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
 import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 import classNames from 'classnames';
-import throttle from 'lodash.throttle';
+import useResizeViewMode from 'hooks/resize';
 
 import { sidebarSelector } from 'store/slices/sidebar';
-import { setViewMode } from 'store/slices/viewMode';
-import { getViewMode } from 'utils/viewMode';
 
 import styles from 'components/Layouts/App/AppLayout.module.scss';
 
@@ -17,17 +15,8 @@ const propTypes = {
   ]).isRequired,
 };
 const AppLayout = ({ children }) => {
-  const dispatch = useDispatch();
   const isVisibleSidebar = useSelector(sidebarSelector.getVisible);
-
-  useEffect(() => {
-    const debouncedHandleResize = throttle(() => {
-      dispatch(setViewMode(getViewMode(window.innerWidth)));
-    }, 1000);
-    window.addEventListener('resize', debouncedHandleResize);
-
-    return () => window.removeEventListener('resize', debouncedHandleResize);
-  }, [dispatch]);
+  useResizeViewMode();
 
   return (
     <div

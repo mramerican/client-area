@@ -28,7 +28,7 @@ const Item = ({ title, icon, path, subNav }) => {
   const dispatch = useDispatch();
   const [subnav, setSubnav] = useState(false);
   const isVisibleSidebar = useSelector(sidebarSelector.getVisible);
-  const location = useLocation();
+  const { pathname } = useLocation();
 
   const toggleSubNav = useCallback(
     () => setSubnav((prevState) => !prevState),
@@ -45,14 +45,14 @@ const Item = ({ title, icon, path, subNav }) => {
   useEffect(() => {
     if (!subnav && subNav) {
       const isActiveSubNav = subNav.find(
-        (element) => element.path === location.pathname,
+        (element) => element.path === pathname,
       );
       if (isActiveSubNav) {
         toggleSubNav();
       }
     }
     // eslint-disable-next-line
-  }, [location.pathname]);
+  }, [pathname]);
 
   const dropDownArrow = (
     <div
