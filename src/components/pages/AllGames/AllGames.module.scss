@@ -2,9 +2,26 @@
 
 .header {
   background-color: $color-lightGrey;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 1;
   padding: 30px 40px;
 }
 
+.gameItemWrapper img {
+  width: 175px;
+}
+
 .content {
-  padding: 40px 30px 60px;
+  padding: 40px 35px 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media all and (min-width: 1776px) {
+  .gameItemWrapper img {
+    width: 224px;
+  }
 }

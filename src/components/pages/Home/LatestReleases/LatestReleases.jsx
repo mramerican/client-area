@@ -8,7 +8,7 @@ import HomeComponentsLayout from 'components/Layouts/HomeComponents/HomeComponen
 import GameItem from 'components/GameItem/GameItem';
 
 import { VIEW_MODE } from 'utils/viewMode';
-import { data } from './data';
+import { data } from 'temporaryData/LatestReleases/data';
 
 import styles from './LatestReleases.module.scss';
 

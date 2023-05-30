@@ -2,27 +2,35 @@
 
 .wrapper {
   margin: 50px auto;
-  text-indent: -9999em;
-  width: 60px;
   height: 60px;
-  border-radius: 50%;
-  background: linear-gradient(to left, $color-blue 20%, $color-white 80%);
   position: relative;
-  animation: load 1.4s infinite linear;
-  transform: translateZ(0);
+  overflow: hidden;
 
-  &:after {
-    background: $color-white;
-    width: 85%;
-    height: 85%;
+  .loader {
+    text-indent: -9999em;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    content: '';
-    margin: auto;
+    background: linear-gradient(to left, $color-blue 20%, $color-white 80%);
     position: absolute;
     top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    left: 50%;
+    animation: load 1.4s infinite linear;
+    transform: translateZ(0);
+
+    &:after {
+      background: $color-white;
+      width: 85%;
+      height: 85%;
+      border-radius: 50%;
+      content: '';
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
   }
 }
 

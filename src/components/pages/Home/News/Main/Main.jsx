@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { mainNews } from 'components/pages/Home/News/data';
+import { mainNews } from 'temporaryData/News/data';
 import styles from './Main.module.scss';
 
 const Main = () => (

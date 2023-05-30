@@ -4,7 +4,7 @@ import AnimationLayout from 'components/Layouts/Animation/AnimationLayout';
 import HomeComponentsLayout from 'components/Layouts/HomeComponents/HomeComponentsLayout';
 import Item from 'components/pages/Home/ComingSoon/Item/Item';
 
-import { data } from './data';
+import { data } from 'temporaryData/ComingSoon/data';
 
 import styles from './ComingSoon.module.scss';
 

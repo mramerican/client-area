@@ -9,7 +9,7 @@ import Item from 'components/pages/Home/News/Item/Item';
 import { viewModeSelector } from 'store/slices/viewMode';
 import { VIEW_MODE } from 'utils/viewMode';
 
-import { news } from 'components/pages/Home/News/data';
+import { news } from 'temporaryData/News/data';
 
 import styles from './News.module.scss';
 

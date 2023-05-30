@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 import AppLayout from 'components/Layouts/App/AppLayout';
 import ContentLayout from 'components/Layouts/Content/ContentLayout';
@@ -8,7 +8,8 @@ import PrivateRoute from 'components/PrivateRoutes/PrivateRoutes';
 import Sidebar from 'components/Sidebar/Sidebar';
 import ToggleSidebar from 'components/ToggleSidebar/ToggleSidebar';
 
-import { PrivatePages } from 'components/pages';
+import { PrivatePages, BASE_PATH } from 'components/pages';
+import { findPatchPages } from 'utils/pages';
 
 const Pages = () => (
   <AppLayout>
@@ -22,6 +23,10 @@ const Pages = () => (
             key={key}
           />
         ))}
+        <Route
+          path={BASE_PATH}
+          element={<Navigate to={findPatchPages('home')} replace />}
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </ContentLayout>

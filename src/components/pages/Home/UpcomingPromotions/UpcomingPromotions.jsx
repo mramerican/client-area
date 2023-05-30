@@ -7,7 +7,7 @@ import AnimationLayout from 'components/Layouts/Animation/AnimationLayout';
 import Slider from 'components/Slider/Slider';
 
 import { VIEW_MODE } from 'utils/viewMode';
-import { data } from './data';
+import { data } from 'temporaryData/UpcomingPromotions/data';
 
 import styles from './UpcomingPromotions.module.scss';
 
