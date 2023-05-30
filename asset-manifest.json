@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/client-area/static/css/main.90e988d4.css",
-    "main.js": "/client-area/static/js/main.154eac53.js",
+    "main.css": "/client-area/static/css/main.0ffe238b.css",
+    "main.js": "/client-area/static/js/main.ebec652f.js",
     "static/media/img_large3.png": "/client-area/static/media/img_large3.4901ff1a7e67c0612ab0.png",
     "static/media/Banner_large.png": "/client-area/static/media/Banner_large.14a305babcdef53fd67b.png",
     "static/media/slide6_large.png": "/client-area/static/media/slide6_large.7a6115fb514be6faf85b.png",
@@ -60,15 +60,16 @@
     "static/media/Account.svg": "/client-area/static/media/Account.4cd79f91f54fd0cd87f36f4fb90cd1cd.svg",
     "static/media/Home.svg": "/client-area/static/media/Home.7ffa9093ad3ae4a866eefef1ac997686.svg",
     "static/media/News.svg": "/client-area/static/media/News.46991775aaf433d02951f527cfe9661a.svg",
+    "static/media/HotOfferIcon.svg": "/client-area/static/media/HotOfferIcon.64b89fbff55b5ff7550549ce8f5cce61.svg",
     "static/media/CopyId.svg": "/client-area/static/media/CopyId.32d71b96fb6b41389c721e6b1774d1d7.svg",
     "static/media/Logo.svg": "/client-area/static/media/Logo.6949606b08c72d8a7e31185963ef62a3.svg",
     "static/media/Search.svg": "/client-area/static/media/Search.17a77064567a7be41c49d0476573c6f5.svg",
     "static/media/ArrowCircle.svg": "/client-area/static/media/ArrowCircle.13ad139101ca8d6c23c1bf828a7378f7.svg",
-    "main.90e988d4.css.map": "/client-area/static/css/main.90e988d4.css.map",
-    "main.154eac53.js.map": "/client-area/static/js/main.154eac53.js.map"
+    "main.0ffe238b.css.map": "/client-area/static/css/main.0ffe238b.css.map",
+    "main.ebec652f.js.map": "/client-area/static/js/main.ebec652f.js.map"
   },
   "entrypoints": [
-    "static/css/main.90e988d4.css",
-    "static/js/main.154eac53.js"
+    "static/css/main.0ffe238b.css",
+    "static/js/main.ebec652f.js"
   ]
 }
