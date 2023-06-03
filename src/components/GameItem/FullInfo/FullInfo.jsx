@@ -1,10 +1,11 @@
-import classNames from 'classnames';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+import classNames from 'classnames';
 import { useSelector } from 'react-redux';
 import { viewModeSelector } from 'store/slices/viewMode';
 import { VIEW_MODE } from 'utils/viewMode';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import Popover from '@mui/material/Popover';
 import GameId from 'components/GameId/GameId';
@@ -52,6 +53,27 @@ const FullInfo = ({ item }) => {
   };
   const handleCloseTags = () => {
     setTagsAnc(null);
+  };
+
+  const theme = createTheme({
+    components: {
+      MuiPopover: {
+        styleOverrides: {
+          paper: {
+            borderRadius: '12px',
+            boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.05)',
+          },
+        },
+      },
+    },
+  });
+  const anchorOrigin = {
+    vertical: 'bottom',
+    horizontal: 'right',
+  };
+  const transformOrigin = {
+    vertical: 'top',
+    horizontal: 'right',
   };
 
   return (
@@ -144,22 +166,24 @@ const FullInfo = ({ item }) => {
                       >
                         +{item.gameFeatures.length - 2}
                       </span>
-                      <Popover
-                        id={gameFeaturesAnc ? 'simple-popover' : undefined}
-                        open={Boolean(gameFeaturesAnc)}
-                        anchorEl={gameFeaturesAnc}
-                        onClose={handleCloseFeatures}
-                        anchorOrigin={{
-                          vertical: 'bottom',
-                          horizontal: 'left',
-                        }}
-                      >
-                        <div className={classNames(styles.tag, styles.popover)}>
-                          {item.gameFeatures.map((value, index) => (
-                            <span key={index}>{value}</span>
-                          ))}
-                        </div>
-                      </Popover>
+                      <ThemeProvider theme={theme}>
+                        <Popover
+                          id={gameFeaturesAnc ? 'simple-popover' : undefined}
+                          open={Boolean(gameFeaturesAnc)}
+                          anchorEl={gameFeaturesAnc}
+                          onClose={handleCloseFeatures}
+                          anchorOrigin={anchorOrigin}
+                          transformOrigin={transformOrigin}
+                        >
+                          <div
+                            className={classNames(styles.tag, styles.popover)}
+                          >
+                            {item.gameFeatures.map((value, index) => (
+                              <span key={index}>{value}</span>
+                            ))}
+                          </div>
+                        </Popover>
+                      </ThemeProvider>
                     </>
                   )}
                 </span>
@@ -180,22 +204,24 @@ const FullInfo = ({ item }) => {
                       >
                         +{item.tags.length - 3}
                       </span>
-                      <Popover
-                        id={tagsAnc ? 'simple-popover' : undefined}
-                        open={Boolean(tagsAnc)}
-                        anchorEl={tagsAnc}
-                        onClose={handleCloseTags}
-                        anchorOrigin={{
-                          vertical: 'bottom',
-                          horizontal: 'left',
-                        }}
-                      >
-                        <div className={classNames(styles.tag, styles.popover)}>
-                          {item.tags.map((value, index) => (
-                            <span key={index}>{value}</span>
-                          ))}
-                        </div>
-                      </Popover>
+                      <ThemeProvider theme={theme}>
+                        <Popover
+                          id={tagsAnc ? 'simple-popover' : undefined}
+                          open={Boolean(tagsAnc)}
+                          anchorEl={tagsAnc}
+                          onClose={handleCloseTags}
+                          anchorOrigin={anchorOrigin}
+                          transformOrigin={transformOrigin}
+                        >
+                          <div
+                            className={classNames(styles.tag, styles.popover)}
+                          >
+                            {item.tags.map((value, index) => (
+                              <span key={index}>{value}</span>
+                            ))}
+                          </div>
+                        </Popover>
+                      </ThemeProvider>
                     </>
                   )}
                 </span>
