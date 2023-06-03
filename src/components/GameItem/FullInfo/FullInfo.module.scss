@@ -39,12 +39,6 @@
   line-height: 20px;
 }
 
-.itemTitle {
-  color: $color-grey;
-  opacity: 0.8;
-  white-space: nowrap;
-}
-
 .gameInfo {
   display: flex;
   justify-content: space-between;
@@ -64,6 +58,15 @@
   color: $color-dark;
   display: flex;
   justify-content: space-between;
+
+  > span:first-child {
+    color: $color-grey;
+    white-space: nowrap;
+  }
+
+  > span:not(.tag) {
+    opacity: 0.8;
+  }
 }
 
 .categoryWrapper {
@@ -112,6 +115,11 @@
     line-height: 14px;
 
     color: $color-grey;
+  }
+
+  &.popover {
+    width: 194px;
+    padding: 15px;
   }
 
   .tagMore {

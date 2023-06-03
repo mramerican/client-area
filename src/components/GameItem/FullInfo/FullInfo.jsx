@@ -1,10 +1,12 @@
-import React from 'react';
+import classNames from 'classnames';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { useSelector } from 'react-redux';
 import { viewModeSelector } from 'store/slices/viewMode';
 import { VIEW_MODE } from 'utils/viewMode';
 
+import Popover from '@mui/material/Popover';
 import GameId from 'components/GameId/GameId';
 import Type from 'components/GameItem/Type/Type';
 
@@ -34,8 +36,23 @@ const propTypes = {
   }).isRequired,
 };
 const FullInfo = ({ item }) => {
+  const [gameFeaturesAnc, setGameFeaturesAnc] = useState(null);
+  const [tagsAnc, setTagsAnc] = useState(null);
   const viewMode = useSelector(viewModeSelector.getViewMode);
+
   const isSimpleMode = viewMode === VIEW_MODE.SIMPLE;
+  const handleClickFeatures = (event) => {
+    setGameFeaturesAnc(event.currentTarget);
+  };
+  const handleCloseFeatures = () => {
+    setGameFeaturesAnc(null);
+  };
+  const handleClickTags = (event) => {
+    setTagsAnc(event.currentTarget);
+  };
+  const handleCloseTags = () => {
+    setTagsAnc(null);
+  };
 
   return (
     <div className={styles.wrapper}>
@@ -55,32 +72,32 @@ const FullInfo = ({ item }) => {
         <div className={styles.gameInfo}>
           <div className={styles.column}>
             <div className={styles.row}>
-              <span className={styles.itemTitle}>Release date:</span>
+              <span>Release date:</span>
               <span>{item.date}</span>
             </div>
             <div className={styles.row}>
-              <span className={styles.itemTitle}>RTP, %:</span>
+              <span>RTP, %:</span>
               <span>{item.rtp}%</span>
             </div>
             <div className={styles.row}>
-              <span className={styles.itemTitle}>RTP Options:</span>
+              <span>RTP Options:</span>
               <span>{item.rtpOptions.join('%, ')}%</span>
             </div>
             <div className={styles.row}>
-              <span className={styles.itemTitle}>Volatility:</span>
+              <span>Volatility:</span>
               <span>{item.volatility}</span>
             </div>
             <div className={styles.row}>
-              <span className={styles.itemTitle}>Paylines:</span>
+              <span>Paylines:</span>
               <span>{item.paylines}</span>
             </div>
             <div className={styles.row}>
-              <span className={styles.itemTitle}>Min Bet, €:</span>
+              <span>Min Bet, €:</span>
               <span>€ {item.minBet}</span>
             </div>
             {isSimpleMode && (
               <div className={styles.row}>
-                <span className={styles.itemTitle}>Max Bet, €:</span>
+                <span>Max Bet, €:</span>
                 <span>€ {item.maxBet}</span>
               </div>
             )}
@@ -88,56 +105,98 @@ const FullInfo = ({ item }) => {
           <div className={styles.column}>
             {!isSimpleMode && (
               <div className={styles.row}>
-                <span className={styles.itemTitle}>Max Bet, €:</span>
+                <span>Max Bet, €:</span>
                 <span>€ {item.maxBet}</span>
               </div>
             )}
             <div className={styles.row}>
-              <span className={styles.itemTitle}>Max Multiplier:</span>
+              <span>Max Multiplier:</span>
               <span>{item.maxMultiplier}</span>
             </div>
             <div className={styles.row}>
-              <span className={styles.itemTitle}>Max Win, €:</span>
+              <span>Max Win, €:</span>
               <span>€ {item.maxWin}</span>
             </div>
             <div className={styles.row}>
-              <span className={styles.itemTitle}>Tournament Feature:</span>
+              <span>Tournament Feature:</span>
               <span>{item.tournamentFeature ? 'Yes' : 'No'}</span>
             </div>
             <div className={styles.row}>
-              <span className={styles.itemTitle}>Quests:</span>
+              <span>Quests:</span>
               <span>{item.quests ? 'Yes' : 'No'}</span>
             </div>
             <div className={styles.row}>
-              <span className={styles.itemTitle}>Progressive Jackpots:</span>
+              <span>Progressive Jackpots:</span>
               <span>{item.progressiveJackpots ? 'Yes' : 'No'}</span>
             </div>
             {isSimpleMode && (
               <div className={styles.row}>
-                <span className={styles.itemTitle}>Game Features:</span>
+                <span>Game Features:</span>
                 <span className={styles.tag}>
                   {item.gameFeatures.slice(0, 2).map((value, index) => (
                     <span key={index}>{value}</span>
                   ))}
                   {item.gameFeatures.length > 2 && (
-                    <span className={styles.tagMore}>
-                      +{item.gameFeatures.length - 2}
-                    </span>
+                    <>
+                      <span
+                        className={styles.tagMore}
+                        onClick={handleClickFeatures}
+                      >
+                        +{item.gameFeatures.length - 2}
+                      </span>
+                      <Popover
+                        id={gameFeaturesAnc ? 'simple-popover' : undefined}
+                        open={Boolean(gameFeaturesAnc)}
+                        anchorEl={gameFeaturesAnc}
+                        onClose={handleCloseFeatures}
+                        anchorOrigin={{
+                          vertical: 'bottom',
+                          horizontal: 'left',
+                        }}
+                      >
+                        <div className={classNames(styles.tag, styles.popover)}>
+                          {item.gameFeatures.map((value, index) => (
+                            <span key={index}>{value}</span>
+                          ))}
+                        </div>
+                      </Popover>
+                    </>
                   )}
                 </span>
               </div>
             )}
             {isSimpleMode && (
               <div className={styles.row}>
-                <span className={styles.itemTitle}>Tags:</span>
+                <span>Tags:</span>
                 <span className={styles.tag}>
                   {item.tags.slice(0, 3).map((value, index) => (
                     <span key={index}>{value}</span>
                   ))}
-                  {item.gameFeatures.length > 3 && (
-                    <span className={styles.tagMore}>
-                      +{item.gameFeatures.length - 3}
-                    </span>
+                  {item.tags.length > 3 && (
+                    <>
+                      <span
+                        className={styles.tagMore}
+                        onClick={handleClickTags}
+                      >
+                        +{item.tags.length - 3}
+                      </span>
+                      <Popover
+                        id={tagsAnc ? 'simple-popover' : undefined}
+                        open={Boolean(tagsAnc)}
+                        anchorEl={tagsAnc}
+                        onClose={handleCloseTags}
+                        anchorOrigin={{
+                          vertical: 'bottom',
+                          horizontal: 'left',
+                        }}
+                      >
+                        <div className={classNames(styles.tag, styles.popover)}>
+                          {item.tags.map((value, index) => (
+                            <span key={index}>{value}</span>
+                          ))}
+                        </div>
+                      </Popover>
+                    </>
                   )}
                 </span>
               </div>
@@ -146,7 +205,7 @@ const FullInfo = ({ item }) => {
           {!isSimpleMode && (
             <div className={styles.column}>
               <div className={styles.row}>
-                <span className={styles.itemTitle}>Game Features:</span>
+                <span>Game Features:</span>
                 <span className={styles.tag}>
                   {item.gameFeatures.map((value, index) => (
                     <span key={index}>{value}</span>
@@ -154,7 +213,7 @@ const FullInfo = ({ item }) => {
                 </span>
               </div>
               <div className={styles.row}>
-                <span className={styles.itemTitle}>Tags:</span>
+                <span>Tags:</span>
                 <span className={styles.tag}>
                   {item.tags.map((value, index) => (
                     <span key={index}>{value}</span>
