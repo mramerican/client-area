@@ -1,0 +1,173 @@
+@import "styles/variables";
+
+.wrapper {
+  border: 1px solid $color-grey2;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  width: 938px;
+  margin: 0 auto;
+}
+
+.img {
+  position: relative;
+  display: flex;
+
+  img {
+    border-radius: 12px 0 0 12px;
+    height: 240px;
+  }
+}
+
+.content {
+  padding: 15px 60px 15px 40px;
+}
+
+.gameTitle {
+  margin-bottom: 8px;
+  display: grid;
+  grid-template-columns: 1fr 125px;
+  grid-template-areas:
+    "title moreBtn"
+    "categoryWrapper moreBtn";
+}
+
+.title {
+  grid-area: title;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.itemTitle {
+  color: $color-grey;
+  opacity: 0.8;
+  white-space: nowrap;
+}
+
+.gameInfo {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.column {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-dark;
+  display: flex;
+  justify-content: space-between;
+}
+
+.categoryWrapper {
+  grid-area: categoryWrapper;
+  display: flex;
+  margin-top: 5px;
+  color: $color-grey;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  .category {
+    padding: 5px 10px;
+    margin-right: 5px;
+
+    color: $color-blue;
+    font-weight: 500;
+    line-height: 14px;
+
+    background-color: rgba(0, 153, 250, 0.1);
+    border-radius: 12px;
+  }
+}
+
+.copy {
+  fill: $color-grey;
+}
+
+.tag {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+  font-weight: 400;
+  margin-bottom: 5px;
+
+  span:not(.tagMore) {
+    white-space: nowrap;
+    padding: 2px 10px;
+    background-color: $color-grey2;
+    border-radius: 40px;
+
+    font-size: 12px;
+    line-height: 14px;
+
+    color: $color-grey;
+  }
+
+  .tagMore {
+    font-size: 14px;
+    line-height: 18px;
+
+    color: $color-blue;
+    text-decoration: underline;
+
+    cursor: pointer;
+  }
+}
+
+.moreBtn {
+  grid-area: moreBtn;
+  border-radius: 12px;
+  width: 125px;
+  height: 32px;
+  color: $color-white;
+  background-color: $color-blue;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+
+  border: none;
+  cursor: pointer;
+  transition: background-color 100ms ease-in;
+
+  &:hover {
+    background-color: $color-darkBlue;
+  }
+}
+
+@media all and (min-width: 1776px) {
+  .wrapper {
+    width: 1442px;
+  }
+  .img img {
+    height: 280px;
+  }
+  .content {
+    padding: 20px 67px 35px 87px;
+    gap: 80px;
+  }
+  .column:last-child {
+    width: 364px;
+  }
+  .gameTitle {
+    margin-bottom: 25px;
+  }
+  .row {
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

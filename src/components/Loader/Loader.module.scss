@@ -5,6 +5,8 @@
   height: 60px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 
   .loader {
     text-indent: -9999em;
@@ -12,9 +14,7 @@
     height: 60px;
     border-radius: 50%;
     background: linear-gradient(to left, $color-blue 20%, $color-white 80%);
-    position: absolute;
-    top: 0;
-    left: 50%;
+    position: relative;
     animation: load 1.4s infinite linear;
     transform: translateZ(0);
 

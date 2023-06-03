@@ -1,7 +1,7 @@
 @import 'styles/variables';
 
 .wrapper {
-  width: 171px;
+  width: 175px;
   padding: 10px;
   border-radius: 12px;
   cursor: pointer;
@@ -20,13 +20,13 @@
   }
 }
 
-.content {
+.categoryWrapper {
   display: flex;
   margin-top: 11px;
   color: $color-grey;
   font-size: 14px;
 
-  .videoSlot {
+  .category {
     padding: 5px 8px;
 
     color: $color-blue;
@@ -48,6 +48,11 @@
 
 .copy {
   fill: $color-grey;
+}
+
+.typeWrapper {
+  top: 10px;
+  left: 10px;
 }
 
 @media all and (min-width: 1776px) {

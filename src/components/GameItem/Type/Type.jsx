@@ -1,14 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { getType } from 'utils/gameItem';
+import classNames from 'classnames';
 
+import { getType } from 'utils/gameItem';
 import styles from './Type.module.scss';
 
 const propTypes = {
   type: PropTypes.string.isRequired,
+  style: PropTypes.string,
+};
+const defaultPropTypes = {
+  styles: null,
 };
 
-const Type = ({ type }) => {
+const Type = ({ type, style }) => {
   const typeConfig = getType(type);
 
   if (!typeConfig) {
@@ -17,7 +22,7 @@ const Type = ({ type }) => {
 
   return (
     <div
-      className={styles.wrapper}
+      className={classNames(styles.wrapper, style)}
       style={{ backgroundColor: typeConfig.color }}
     >
       {typeConfig.icon && typeConfig.icon({ className: styles.icon })}
@@ -27,4 +32,5 @@ const Type = ({ type }) => {
 };
 
 Type.propTypes = propTypes;
+Type.defaultPropTypes = defaultPropTypes;
 export default Type;

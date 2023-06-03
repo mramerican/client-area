@@ -5,7 +5,7 @@ import { viewModeSelector } from 'store/slices/viewMode';
 
 import AnimationLayout from 'components/Layouts/Animation/AnimationLayout';
 import HomeComponentsLayout from 'components/Layouts/HomeComponents/HomeComponentsLayout';
-import GameItem from 'components/GameItem/GameItem';
+import Card from 'components/GameItem/Card/Card';
 
 import { VIEW_MODE } from 'utils/viewMode';
 import { data } from 'temporaryData/LatestReleases/data';
@@ -27,11 +27,7 @@ const LatestReleases = () => {
       <AnimationLayout animation="fadeInLeft">
         <div className={styles.content}>
           {data.slice(0, countSize).map((item) => (
-            <GameItem
-              key={item.id}
-              item={item}
-              style={styles.gameItemWrapper}
-            />
+            <Card key={item.id} item={item} style={styles.gameItemWrapper} />
           ))}
         </div>
       </AnimationLayout>

@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import Type from 'components/GameItem/Type/Type';
 import GameId from 'components/GameId/GameId';
 
-import styles from 'components/GameItem/GameItem.module.scss';
+import styles from 'components/GameItem/Card/Card.module.scss';
 
 const propTypes = {
   item: PropTypes.shape({
@@ -24,18 +24,18 @@ const defaultPropTypes = {
   style: null,
 };
 
-const GameItem = ({ item: { img, title, category, id, type }, style }) => (
+const Card = ({ item: { img, title, category, id, type }, style }) => (
   <div className={classNames(styles.wrapper, style)}>
     <img src={img} alt={title} />
-    {type && <Type type={type} />}
-    <div className={styles.content}>
-      <span className={styles.videoSlot}>{category}</span>
+    {type && <Type type={type} style={styles.typeWrapper} />}
+    <div className={styles.categoryWrapper}>
+      <span className={styles.category}>{category}</span>
       <GameId gameId={id} copyStyles={styles.copy} />
     </div>
     <div className={styles.title}>{title}</div>
   </div>
 );
 
-GameItem.propTypes = propTypes;
-GameItem.defaultPropTypes = defaultPropTypes;
-export default GameItem;
+Card.propTypes = propTypes;
+Card.defaultPropTypes = defaultPropTypes;
+export default Card;
