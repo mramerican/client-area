@@ -26,7 +26,7 @@ const CheckedIcon = styled(Icon)({
     height: 12,
     boxSizing: 'border-box',
     position: 'absolute',
-    left: 14,
+    left: 13.5,
     top: 8,
     borderColor: '#0099FA',
     borderWidth: '0 2px 2px 0',
