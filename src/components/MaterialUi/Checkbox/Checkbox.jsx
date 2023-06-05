@@ -11,8 +11,8 @@ const Icon = styled('span')({
   border: '1px solid #FFFFFF',
   backgroundColor: 'rgba(255,255,255,.5)',
   'input:hover ~ &': {
+    backgroundColor: 'rgba(255,255,255,.8)',
     borderColor: '#0099FA',
-    backgroundColor: '#FFF',
   },
 });
 
@@ -33,6 +33,9 @@ const CheckedIcon = styled(Icon)({
     borderStyle: 'solid',
     transformOrigin: 'bottom left',
     transform: 'rotate(45deg)',
+  },
+  'input:hover ~ &': {
+    backgroundColor: '#FFF',
   },
 });
 
