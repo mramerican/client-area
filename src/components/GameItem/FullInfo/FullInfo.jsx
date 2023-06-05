@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
+import Checkbox from 'components/MaterialUi/Checkbox/Checkbox';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-import classNames from 'classnames';
 import { useSelector } from 'react-redux';
 import { viewModeSelector } from 'store/slices/viewMode';
 import { VIEW_MODE } from 'utils/viewMode';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-import Popover from '@mui/material/Popover';
 import GameId from 'components/GameId/GameId';
 import Type from 'components/GameItem/Type/Type';
+import Popover from 'components/MaterialUi/Popover/Popover';
 
 import styles from './FullInfo.module.scss';
 
@@ -35,52 +34,25 @@ const propTypes = {
     tags: PropTypes.arrayOf(PropTypes.string).isRequired,
     type: PropTypes.string,
   }).isRequired,
+  checkbox: PropTypes.shape({
+    disabled: PropTypes.bool,
+    checked: PropTypes.bool,
+  }),
 };
-const FullInfo = ({ item }) => {
-  const [gameFeaturesAnc, setGameFeaturesAnc] = useState(null);
-  const [tagsAnc, setTagsAnc] = useState(null);
+const defaultPropTypes = {
+  checkbox: null,
+};
+
+const FullInfo = ({ item, checkbox }) => {
   const viewMode = useSelector(viewModeSelector.getViewMode);
-
   const isSimpleMode = viewMode === VIEW_MODE.SIMPLE;
-  const handleClickFeatures = (event) => {
-    setGameFeaturesAnc(event.currentTarget);
-  };
-  const handleCloseFeatures = () => {
-    setGameFeaturesAnc(null);
-  };
-  const handleClickTags = (event) => {
-    setTagsAnc(event.currentTarget);
-  };
-  const handleCloseTags = () => {
-    setTagsAnc(null);
-  };
-
-  const theme = createTheme({
-    components: {
-      MuiPopover: {
-        styleOverrides: {
-          paper: {
-            borderRadius: '12px',
-            boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.05)',
-          },
-        },
-      },
-    },
-  });
-  const anchorOrigin = {
-    vertical: 'bottom',
-    horizontal: 'right',
-  };
-  const transformOrigin = {
-    vertical: 'top',
-    horizontal: 'right',
-  };
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.img}>
         <img src={item.img} alt={item.title} />
         {item.type && <Type type={item.type} />}
+        {checkbox && <Checkbox {...checkbox} />}
       </div>
       <div className={styles.content}>
         <div className={styles.gameTitle}>
@@ -159,32 +131,7 @@ const FullInfo = ({ item }) => {
                     <span key={index}>{value}</span>
                   ))}
                   {item.gameFeatures.length > 2 && (
-                    <>
-                      <span
-                        className={styles.tagMore}
-                        onClick={handleClickFeatures}
-                      >
-                        +{item.gameFeatures.length - 2}
-                      </span>
-                      <ThemeProvider theme={theme}>
-                        <Popover
-                          id={gameFeaturesAnc ? 'simple-popover' : undefined}
-                          open={Boolean(gameFeaturesAnc)}
-                          anchorEl={gameFeaturesAnc}
-                          onClose={handleCloseFeatures}
-                          anchorOrigin={anchorOrigin}
-                          transformOrigin={transformOrigin}
-                        >
-                          <div
-                            className={classNames(styles.tag, styles.popover)}
-                          >
-                            {item.gameFeatures.map((value, index) => (
-                              <span key={index}>{value}</span>
-                            ))}
-                          </div>
-                        </Popover>
-                      </ThemeProvider>
-                    </>
+                    <Popover data={item.gameFeatures} countMore={2} />
                   )}
                 </span>
               </div>
@@ -197,32 +144,7 @@ const FullInfo = ({ item }) => {
                     <span key={index}>{value}</span>
                   ))}
                   {item.tags.length > 3 && (
-                    <>
-                      <span
-                        className={styles.tagMore}
-                        onClick={handleClickTags}
-                      >
-                        +{item.tags.length - 3}
-                      </span>
-                      <ThemeProvider theme={theme}>
-                        <Popover
-                          id={tagsAnc ? 'simple-popover' : undefined}
-                          open={Boolean(tagsAnc)}
-                          anchorEl={tagsAnc}
-                          onClose={handleCloseTags}
-                          anchorOrigin={anchorOrigin}
-                          transformOrigin={transformOrigin}
-                        >
-                          <div
-                            className={classNames(styles.tag, styles.popover)}
-                          >
-                            {item.tags.map((value, index) => (
-                              <span key={index}>{value}</span>
-                            ))}
-                          </div>
-                        </Popover>
-                      </ThemeProvider>
-                    </>
+                    <Popover data={item.tags} countMore={3} />
                   )}
                 </span>
               </div>
@@ -255,4 +177,5 @@ const FullInfo = ({ item }) => {
 };
 
 FullInfo.propTypes = propTypes;
+FullInfo.defaultPropTypes = defaultPropTypes;
 export default FullInfo;

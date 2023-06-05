@@ -1,3 +1,4 @@
+import Checkbox from 'components/MaterialUi/Checkbox/Checkbox';
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -15,6 +16,10 @@ const propTypes = {
     id: PropTypes.number.isRequired,
     type: PropTypes.string,
   }).isRequired,
+  checkbox: PropTypes.shape({
+    disabled: PropTypes.bool,
+    checked: PropTypes.bool,
+  }),
   style: PropTypes.string,
 };
 const defaultPropTypes = {
@@ -22,12 +27,18 @@ const defaultPropTypes = {
     type: null,
   },
   style: null,
+  checkbox: null,
 };
 
-const Card = ({ item: { img, title, category, id, type }, style }) => (
+const Card = ({
+  item: { img, title, category, id, type },
+  style,
+  checkbox,
+}) => (
   <div className={classNames(styles.wrapper, style)}>
     <img src={img} alt={title} />
     {type && <Type type={type} style={styles.typeWrapper} />}
+    {checkbox && <Checkbox {...checkbox} />}
     <div className={styles.categoryWrapper}>
       <span className={styles.category}>{category}</span>
       <GameId gameId={id} copyStyles={styles.copy} />
