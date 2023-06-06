@@ -38,7 +38,6 @@ const RestorePassword = () => {
           title="Get New Password"
           type="submit"
           className={stylesLayout.submit}
-          myheight={56}
         />
         <Link to={findPatchLogin('login')} className={styles.loginLink}>
           Back to Log In

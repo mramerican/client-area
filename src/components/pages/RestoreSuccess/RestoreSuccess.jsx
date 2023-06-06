@@ -24,7 +24,6 @@ const RestoreSuccess = () => {
         className={stylesLayout.submit}
         component={Link}
         to={findPatchLogin('login')}
-        myheight={56}
       />
     </>
   );

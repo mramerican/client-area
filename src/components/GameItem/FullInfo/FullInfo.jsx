@@ -62,7 +62,7 @@ const FullInfo = ({ item, checkbox }) => {
             <span className={styles.category}>{item.category}</span>
             <GameId gameId={item.id} copyStyles={styles.copy} />
           </div>
-          <Button title="More info" />
+          <Button title="More info" className={styles.moreBtn} />
         </div>
         <div className={styles.gameInfo}>
           <div className={styles.column}>

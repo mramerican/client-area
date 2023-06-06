@@ -62,12 +62,7 @@ const Login = () => {
             Forgot password
           </Link>
         </div>
-        <Button
-          title="Sign In"
-          type="submit"
-          className={stylesLayout.submit}
-          myheight={56}
-        />
+        <Button title="Sign In" type="submit" className={stylesLayout.submit} />
       </form>
     </>
   );

@@ -6,16 +6,14 @@ import { Button as MuiButton, styled } from '@mui/material';
 const propTypes = {
   link: PropTypes.string,
   onClick: PropTypes.func,
-  myheight: PropTypes.number,
   title: PropTypes.string.isRequired,
 };
 const defaultProps = {
   link: '',
   onClick: null,
-  myheight: 40,
 };
 
-const CustomButton = styled(MuiButton)(({ myheight }) => ({
+const CustomButton = styled(MuiButton)(() => ({
   color: '#FFF',
   backgroundColor: '#0099FA',
   borderRadius: 12,
@@ -25,7 +23,7 @@ const CustomButton = styled(MuiButton)(({ myheight }) => ({
   textTransform: 'none',
   gridArea: 'btn',
   border: 'none',
-  height: myheight,
+  height: 40,
   '&:hover': {
     backgroundColor: '#0069FF',
     border: 'none',

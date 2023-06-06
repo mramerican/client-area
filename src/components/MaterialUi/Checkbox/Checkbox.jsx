@@ -51,7 +51,12 @@ const CheckedIcon = styled(Icon)({
 const Checkbox = ({ stylesWrapper, ...props }) => {
   return (
     <div className={classNames(styles.wrapper, stylesWrapper)}>
-      <MuiCheckbox {...props} icon={<Icon />} checkedIcon={<CheckedIcon />} />
+      <MuiCheckbox
+        name="MuiCheckbox"
+        icon={<Icon />}
+        checkedIcon={<CheckedIcon />}
+        {...props}
+      />
     </div>
   );
 };

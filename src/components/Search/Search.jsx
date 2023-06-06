@@ -48,6 +48,7 @@ const Search = () => {
         className={styles.input}
         placeholder="Search"
         onKeyDown={handleKeyDown}
+        name="Search"
       />
     </div>
   );
