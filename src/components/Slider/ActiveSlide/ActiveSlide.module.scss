@@ -48,25 +48,8 @@
   }
 
   .moreBtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 145px;
-    height: 40px;
-    font-size: 14px;
-    line-height: 24px;
-    margin-top: 15px;
-    text-decoration: none;
-    color: $color-white;
-
-    background-color: $color-blue;
-    border-radius: 12px;
-
-    transition: background-color 100ms ease-in;
-
-    &:hover {
-      background-color: $color-darkBlue;
-    }
+    margin-top: 20px;
   }
 
   &.vertical {
@@ -150,10 +133,6 @@
     .description {
       font-size: 16px;
       line-height: 20px;
-    }
-
-    .moreBtn {
-      margin-top: 20px;
     }
   }
 }

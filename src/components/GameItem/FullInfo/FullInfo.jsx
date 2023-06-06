@@ -1,4 +1,3 @@
-import Checkbox from 'components/MaterialUi/Checkbox/Checkbox';
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -9,6 +8,8 @@ import { VIEW_MODE } from 'utils/viewMode';
 import GameId from 'components/GameId/GameId';
 import Type from 'components/GameItem/Type/Type';
 import Popover from 'components/MaterialUi/Popover/Popover';
+import Button from 'components/MaterialUi/Button/Button';
+import Checkbox from 'components/MaterialUi/Checkbox/Checkbox';
 
 import styles from './FullInfo.module.scss';
 
@@ -39,7 +40,7 @@ const propTypes = {
     checked: PropTypes.bool,
   }),
 };
-const defaultPropTypes = {
+const defaultProps = {
   checkbox: null,
 };
 
@@ -61,7 +62,7 @@ const FullInfo = ({ item, checkbox }) => {
             <span className={styles.category}>{item.category}</span>
             <GameId gameId={item.id} copyStyles={styles.copy} />
           </div>
-          <button className={styles.moreBtn}>More info</button>
+          <Button title="More info" />
         </div>
         <div className={styles.gameInfo}>
           <div className={styles.column}>
@@ -155,17 +156,23 @@ const FullInfo = ({ item, checkbox }) => {
               <div className={styles.row}>
                 <span>Game Features:</span>
                 <span className={styles.tag}>
-                  {item.gameFeatures.map((value, index) => (
+                  {item.gameFeatures.slice(0, 9).map((value, index) => (
                     <span key={index}>{value}</span>
                   ))}
+                  {item.gameFeatures.length > 9 && (
+                    <Popover data={item.gameFeatures} countMore={9} />
+                  )}
                 </span>
               </div>
               <div className={styles.row}>
                 <span>Tags:</span>
                 <span className={styles.tag}>
-                  {item.tags.map((value, index) => (
+                  {item.tags.slice(0, 14).map((value, index) => (
                     <span key={index}>{value}</span>
                   ))}
+                  {item.tags.length > 14 && (
+                    <Popover data={item.tags} countMore={14} />
+                  )}
                 </span>
               </div>
             </div>
@@ -177,5 +184,5 @@ const FullInfo = ({ item, checkbox }) => {
 };
 
 FullInfo.propTypes = propTypes;
-FullInfo.defaultPropTypes = defaultPropTypes;
+FullInfo.defaultProps = defaultProps;
 export default FullInfo;

@@ -4,8 +4,12 @@ import useToken from 'hooks/auth';
 
 import { findPatchPages, findPatchLogin } from 'utils/pages';
 
-import styles from 'components/pages/Login/Login.module.scss';
+import Button from 'components/MaterialUi/Button/Button';
+import Checkbox from 'components/MaterialUi/Checkbox/Checkbox';
+import { FormControlLabel } from '@mui/material';
+
 import stylesLayout from 'components/Layouts/Login/LoginLayout.module.scss';
+import styles from 'components/pages/Login/Login.module.scss';
 
 const Login = () => {
   const [username, setUserName] = useState();
@@ -43,22 +47,27 @@ const Login = () => {
         </div>
         <div className={styles.rememberBlock}>
           <div className={styles.remember}>
-            <label>
-              <input
-                type="checkbox"
-                checked={remember}
-                onChange={() => setRemember(!remember)}
-              />
-              Remember me
-            </label>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  defaultChecked
+                  onChange={() => setRemember(!remember)}
+                  stylesWrapper={styles.checkboxWrapper}
+                />
+              }
+              label="Remember me"
+            />
           </div>
           <Link to={findPatchLogin('restore')} className={styles.restoreLink}>
             Forgot password
           </Link>
         </div>
-        <button type="submit" className={stylesLayout.submit}>
-          Sign In
-        </button>
+        <Button
+          title="Sign In"
+          type="submit"
+          className={stylesLayout.submit}
+          myheight={56}
+        />
       </form>
     </>
   );

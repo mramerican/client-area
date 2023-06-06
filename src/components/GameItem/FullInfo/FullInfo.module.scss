@@ -28,8 +28,8 @@
   display: grid;
   grid-template-columns: 1fr 125px;
   grid-template-areas:
-    "title moreBtn"
-    "categoryWrapper moreBtn";
+    "title btn"
+    "categoryWrapper btn";
 }
 
 .title {
@@ -132,27 +132,6 @@
   max-width: 194px;
   padding: 15px;
   margin-bottom: 0;
-}
-
-.moreBtn {
-  grid-area: moreBtn;
-  border-radius: 12px;
-  width: 125px;
-  height: 32px;
-  color: $color-white;
-  background-color: $color-blue;
-
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-
-  border: none;
-  cursor: pointer;
-  transition: background-color 100ms ease-in;
-
-  &:hover {
-    background-color: $color-darkBlue;
-  }
 }
 
 @media all and (min-width: 1776px) {

@@ -59,22 +59,5 @@
 }
 
 .submit {
-  display: block;
-
-  text-align: center;
   width: 100%;
-  border-radius: 12px;
-  background-color: $color-blue;
-  color: $color-white;
-  border: none;
-  padding: 16px 25px;
-  text-decoration: none;
-
-  cursor: pointer;
-
-  transition: background-color 100ms ease-in;
-
-  &:hover {
-    background-color: $color-darkBlue;
-  }
 }

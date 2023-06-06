@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 
-import styles from 'components/pages/RestorePassword/RestorePassword.module.scss';
-import stylesLayout from 'components/Layouts/Login/LoginLayout.module.scss';
 import { Link, useNavigate } from 'react-router-dom';
 import { findPatchLogin } from 'utils/pages';
+
+import Button from 'components/MaterialUi/Button/Button';
+
+import stylesLayout from 'components/Layouts/Login/LoginLayout.module.scss';
+import styles from 'components/pages/RestorePassword/RestorePassword.module.scss';
 
 const RestorePassword = () => {
   const [email, setUserEmail] = useState();
@@ -31,9 +34,12 @@ const RestorePassword = () => {
             onChange={(e) => setUserEmail(e.target.value)}
           />
         </div>
-        <button type="submit" className={stylesLayout.submit}>
-          Get New Password
-        </button>
+        <Button
+          title="Get New Password"
+          type="submit"
+          className={stylesLayout.submit}
+          myheight={56}
+        />
         <Link to={findPatchLogin('login')} className={styles.loginLink}>
           Back to Log In
         </Link>

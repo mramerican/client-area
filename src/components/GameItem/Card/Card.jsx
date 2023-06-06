@@ -22,7 +22,7 @@ const propTypes = {
   }),
   style: PropTypes.string,
 };
-const defaultPropTypes = {
+const defaultProps = {
   item: {
     type: null,
   },
@@ -36,9 +36,11 @@ const Card = ({
   checkbox,
 }) => (
   <div className={classNames(styles.wrapper, style)}>
-    <img src={img} alt={title} />
-    {type && <Type type={type} style={styles.typeWrapper} />}
-    {checkbox && <Checkbox {...checkbox} />}
+    <div className={styles.imgWrapper}>
+      <img src={img} alt={title} />
+      {type && <Type type={type} />}
+      {checkbox && <Checkbox {...checkbox} />}
+    </div>
     <div className={styles.categoryWrapper}>
       <span className={styles.category}>{category}</span>
       <GameId gameId={id} copyStyles={styles.copy} />
@@ -48,5 +50,5 @@ const Card = ({
 );
 
 Card.propTypes = propTypes;
-Card.defaultPropTypes = defaultPropTypes;
+Card.defaultProps = defaultProps;
 export default Card;

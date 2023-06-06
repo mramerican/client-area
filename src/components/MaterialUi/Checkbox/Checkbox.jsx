@@ -1,8 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 import { Checkbox as MuiCheckbox, styled } from '@mui/material';
 
 import styles from './Checkbox.module.scss';
+
+const propTypes = {
+  stylesWrapper: PropTypes.string,
+};
+const defaultProps = {
+  stylesWrapper: null,
+};
 
 const Icon = styled('span')({
   borderRadius: 4,
@@ -39,12 +48,14 @@ const CheckedIcon = styled(Icon)({
   },
 });
 
-const Checkbox = (props) => {
+const Checkbox = ({ stylesWrapper, ...props }) => {
   return (
-    <div className={styles.wrapper}>
+    <div className={classNames(styles.wrapper, stylesWrapper)}>
       <MuiCheckbox {...props} icon={<Icon />} checkedIcon={<CheckedIcon />} />
     </div>
   );
 };
 
+Checkbox.propTypes = propTypes;
+Checkbox.defaultProps = defaultProps;
 export default Checkbox;

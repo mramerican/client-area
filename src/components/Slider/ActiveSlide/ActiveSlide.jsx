@@ -1,3 +1,4 @@
+import Button from 'components/MaterialUi/Button/Button';
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -57,9 +58,12 @@ const ActiveSlide = ({ activeSlide, handleClick, viewMode, type }) => {
           <div className={styles.date}>{activeSlide.date}</div>
         )}
         <div className={styles.description}>{activeSlide.description}</div>
-        <Link className={styles.moreBtn} to={activeSlide.link}>
-          Learn more
-        </Link>
+        <Button
+          title="Learn more"
+          component={Link}
+          to={activeSlide.link}
+          className={styles.moreBtn}
+        />
       </div>
     </div>
   );
