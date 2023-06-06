@@ -20,7 +20,7 @@
 }
 
 .content {
-  padding: 15px 60px 15px 40px;
+  padding: 20px 40px 15px;
 }
 
 .gameTitle {
@@ -146,11 +146,17 @@
     height: 280px;
   }
   .content {
-    padding: 20px 67px 35px 87px;
-    gap: 80px;
+    padding: 25px 60px;
   }
-  .column:last-child {
-    width: 364px;
+  .column {
+    width: 243px;
+
+    &:last-child {
+      width: 364px;
+    }
+  }
+  .gameInfo {
+    gap: 80px;
   }
   .gameTitle {
     margin-bottom: 25px;
