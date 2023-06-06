@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/client-area/static/css/main.172d488a.css",
-    "main.js": "/client-area/static/js/main.93555998.js",
+    "main.js": "/client-area/static/js/main.6932e910.js",
     "static/media/img_large3.png": "/client-area/static/media/img_large3.4901ff1a7e67c0612ab0.png",
     "static/media/Banner_large.png": "/client-area/static/media/Banner_large.14a305babcdef53fd67b.png",
     "static/media/slide6_large.png": "/client-area/static/media/slide6_large.7a6115fb514be6faf85b.png",
@@ -34,9 +34,14 @@
     "static/media/thumbnail_img_large3.png": "/client-area/static/media/thumbnail_img_large3.5639ffb91f67131f5f1b.png",
     "static/media/thumbnail_img_large2.png": "/client-area/static/media/thumbnail_img_large2.09fcdd5449c964f3fac1.png",
     "static/media/thumbnail_img_large1.png": "/client-area/static/media/thumbnail_img_large1.0eec492936d35dcc61b9.png",
+    "static/media/wonderfarmbonusbuy_360x360.jpg": "/client-area/static/media/wonderfarmbonusbuy_360x360.b48d5a79449b38ab7b5a.jpg",
+    "static/media/irishweekendbonusbuy_360x360.jpg": "/client-area/static/media/irishweekendbonusbuy_360x360.7c84097b3ccc1f7a3462.jpg",
+    "static/media/treasuresnipes_360x360.jpg": "/client-area/static/media/treasuresnipes_360x360.c32bd73d7fefb17a0205.jpg",
     "static/media/wonderfarmbonusbuy_288x375.jpg": "/client-area/static/media/wonderfarmbonusbuy_288x375.7d965a719b0692872b68.jpg",
+    "static/media/superbartender_360x360.jpg": "/client-area/static/media/superbartender_360x360.91f97cc6927ea5f20366.jpg",
     "static/media/treasuresofthegods_288x375.jpg": "/client-area/static/media/treasuresofthegods_288x375.794092fdb4594214c421.jpg",
     "static/media/ruedadechilebonusbuy_446x186.jpg": "/client-area/static/media/ruedadechilebonusbuy_446x186.49fdf161c093617c188e.jpg",
+    "static/media/starguardiens_360x360.jpg": "/client-area/static/media/starguardiens_360x360.4b166cbbbfc214b8c58b.jpg",
     "static/media/funnyhunting_288x375.jpg": "/client-area/static/media/funnyhunting_288x375.4f245f0ae9be35f697e4.jpg",
     "static/media/banner.png": "/client-area/static/media/banner.5808a93dc92dcd7dba17.png",
     "static/media/moneyminterbonusbuy_446x186.jpg": "/client-area/static/media/moneyminterbonusbuy_446x186.0081981d1e25dcb152aa.jpg",
@@ -66,10 +71,10 @@
     "static/media/Search.svg": "/client-area/static/media/Search.17a77064567a7be41c49d0476573c6f5.svg",
     "static/media/ArrowCircle.svg": "/client-area/static/media/ArrowCircle.13ad139101ca8d6c23c1bf828a7378f7.svg",
     "main.172d488a.css.map": "/client-area/static/css/main.172d488a.css.map",
-    "main.93555998.js.map": "/client-area/static/js/main.93555998.js.map"
+    "main.6932e910.js.map": "/client-area/static/js/main.6932e910.js.map"
   },
   "entrypoints": [
     "static/css/main.172d488a.css",
-    "static/js/main.93555998.js"
+    "static/js/main.6932e910.js"
   ]
 }
