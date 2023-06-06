@@ -14,6 +14,7 @@ const defaultProps = {
 };
 
 const CustomButton = styled(MuiButton)(() => ({
+  fontFamily: 'inherit',
   color: '#FFF',
   backgroundColor: '#0099FA',
   borderRadius: 12,
