@@ -1,8 +1,8 @@
-import Img1 from 'images/HomePage/LatestReleases/Megagreatestcatchbonus_288x375.jpg';
-import Img2 from 'images/HomePage/LatestReleases/funnyhunting_288x375.jpg';
-import Img3 from 'images/HomePage/LatestReleases/SoldIt_288x375.jpg';
-import Img4 from 'images/HomePage/LatestReleases/wonderfarmbonusbuy_288x375.jpg';
-import Img5 from 'images/HomePage/LatestReleases/treasuresofthegods_288x375.jpg';
+import Img1 from 'images/AllGames/irishweekendbonusbuy_360x360.jpg';
+import Img2 from 'images/AllGames/starguardiens_360x360.jpg';
+import Img3 from 'images/AllGames/superbartender_360x360.jpg';
+import Img4 from 'images/AllGames/wonderfarmbonusbuy_360x360.jpg';
+import Img5 from 'images/AllGames/treasuresnipes_360x360.jpg';
 
 export const data = [
   {
