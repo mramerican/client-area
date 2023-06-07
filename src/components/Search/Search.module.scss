@@ -1,20 +1,5 @@
 @import "styles/variables";
 
-.wrapper {
-  padding: 35px 15px 45px 30px;
-  position: relative;
-
-  &.hideSidebar {
-    .icon {
-      cursor: pointer;
-    }
-
-    .input {
-      visibility: hidden;
-    }
-  }
-}
-
 .icon {
   position: absolute;
   left: 30px;
@@ -27,7 +12,6 @@
   background-color: transparent;
   box-shadow: none;
   outline: none;
-
   border-bottom: 1px solid $color-grey;
   color: $color-white;
   padding: 0 30px 15px 35px;
@@ -35,5 +19,20 @@
 
   &:focus, &:hover {
     border-bottom-color: $color-blue;
+  }
+}
+
+.wrapper {
+  padding: 35px 15px 45px 30px;
+  position: relative;
+
+  &.hideSidebar {
+    .icon {
+      cursor: pointer;
+    }
+
+    .input {
+      visibility: hidden;
+    }
   }
 }

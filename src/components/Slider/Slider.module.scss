@@ -24,7 +24,7 @@
   }
 }
 
-@media all and (min-width: 1776px) {
+@media all and (width >= 1776px) {
   .wrapper {
     &.vertical {
       height: 495px;

@@ -1,5 +1,13 @@
 @import 'styles/variables';
 
+.title {
+  margin-top: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: $color-black;
+}
+
 .wrapper {
   width: 175px;
   padding: 10px;
@@ -33,22 +41,12 @@
 
   .category {
     padding: 5px 8px;
-
     color: $color-blue;
     line-height: 12px;
     font-weight: 500;
-
-    background-color: rgba(0, 153, 250, 0.1);
+    background-color: rgb(0 153 250 / 10%);
     border-radius: 12px;
   }
-}
-
-.title {
-  margin-top: 5px;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
-  color: $color-black;
 }
 
 .copy {
@@ -61,7 +59,7 @@
   bottom: 5px;
 }
 
-@media all and (min-width: 1776px) {
+@media all and (width >= 1776px) {
   .wrapper {
     width: 224px;
   }

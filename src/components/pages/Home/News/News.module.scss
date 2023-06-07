@@ -7,7 +7,7 @@
   width: 460px;
 }
 
-@media all and (min-width: 1776px) {
+@media all and (width >= 1776px) {
   .newsItems {
     width: 709px;
   }

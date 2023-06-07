@@ -1,5 +1,20 @@
 @import "styles/variables";
 
+.arrow {
+  border: solid $color-grey;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+
+  &.arrowUp {
+    transform: rotate(-135deg);
+  }
+
+  &.arrowDown {
+    transform: rotate(45deg);
+  }
+}
+
 .wrapper {
   display: flex;
   text-decoration: none;
@@ -17,6 +32,7 @@
     .arrow {
       border-color: $color-white;
     }
+
     .icon {
       fill: $color-white;
 
@@ -34,6 +50,7 @@
     .arrow {
       border-color: $color-blue;
     }
+
     .icon {
       fill: $color-blue;
 
@@ -48,14 +65,14 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  background: rgba(0, 153, 250, 0.05);
+  background: rgb(0 153 250 / 5%);
   padding-left: 55px;
   height: 40px;
   color: $color-white;
 
   &:hover, &.activeSub {
     color: $color-blue;
-    background: rgba(0, 153, 250, 0.1);
+    background: rgb(0 153 250 / 10%);
   }
 }
 
@@ -70,18 +87,4 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-
-.arrow {
-  border: solid $color-grey;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 3px;
-
-  &.arrowUp {
-    transform: rotate(-135deg);
-  }
-  &.arrowDown {
-    transform: rotate(45deg);
-  }
 }

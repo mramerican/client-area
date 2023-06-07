@@ -14,7 +14,7 @@
     background-color: #1C1D1E;
   }
 
-  .left:after, .right:after {
+  .left::after, .right::after {
     content: '';
     display: inline-block;
     width: 7px;
@@ -23,11 +23,13 @@
     border-top: 2px solid #9FA2B4;
     border-right: 2px solid #9FA2B4;
   }
-  .left:after {
+
+  .left::after {
     margin-left: 5px;
     transform: rotate(-135deg);
   }
-  .right:after {
+
+  .right::after {
     margin-left: 0;
     transform: rotate(45deg);
   }

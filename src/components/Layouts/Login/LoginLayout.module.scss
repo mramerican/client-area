@@ -5,9 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   height: 100vh;
-
   background-color: $color-dark;
   color: $color-white;
 }
@@ -24,7 +22,6 @@
 .title {
   text-transform: uppercase;
   text-align: center;
-
   font-weight: 500;
   font-size: 36px;
   line-height: 36px;
@@ -39,7 +36,6 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
-
     margin-bottom: 5px;
     display: block;
   }
@@ -51,7 +47,6 @@
     border: none;
     background-color: $color-lightGrey;
     border-radius: 12px;
-
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;

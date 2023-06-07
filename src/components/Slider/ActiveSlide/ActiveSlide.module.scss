@@ -3,13 +3,12 @@
 .wrapper {
   background-repeat: no-repeat;
   color: $color-white;
-
   animation-name: loadBanner;
   animation-duration: 500ms;
   animation-timing-function: cubic-bezier(.1,-.6,.2,0);
 
   .gradient {
-    background: linear-gradient(90deg, rgba(9, 10, 11, 0.7) 0%, rgba(9, 10, 11, 0) 100%);
+    background: linear-gradient(90deg, rgb(9 10 11 / 70%) 0%, rgb(9 10 11 / 0%) 100%);
     border-radius: 12px 0 0 12px;
     padding-left: 40px;
   }
@@ -25,7 +24,6 @@
 
   .title {
     margin-top: 20px;
-
     font-weight: 700;
     font-size: 28px;
     line-height: 28px;
@@ -34,7 +32,6 @@
 
   .date {
     margin-top: 10px;
-
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -64,13 +61,11 @@
 
     .category {
       padding: 5px 10px;
-
       color: $color-blue;
       font-weight: 500;
       font-size: 14px;
       line-height: 14px;
-
-      background-color: rgba(0, 153, 250, 0.3);
+      background-color: rgb(0 153 250 / 30%);
       border-radius: 12px;
     }
 
@@ -88,13 +83,11 @@
 
     .category {
       padding: 5px 15px;
-
       color: $color-green;
       font-weight: 600;
       font-size: 14px;
       line-height: 24px;
-
-      background: rgba(138, 203, 0, 0.3);
+      background: rgb(138 203 0 / 30%);
       border-radius: 40px;
     }
   }
@@ -105,7 +98,7 @@
   100% { opacity: 1; }
 }
 
-@media all and (min-width: 1776px) {
+@media all and (width >= 1776px) {
   .wrapper {
     &.vertical {
       width: 1078px;

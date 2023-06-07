@@ -6,7 +6,6 @@
   padding-left: 40px;
   color: $color-white;
   margin: 55px auto 80px;
-
   width: 900px;
 }
 
@@ -52,7 +51,7 @@
   left: 239px;
 }
 
-@media all and (min-width: 1776px) {
+@media all and (width >= 1776px) {
   .wrapper {
     height: 569px;
     padding-left: 52px;

@@ -96,7 +96,7 @@
   100% { transform: translate3d(0,0,0); }
 }
 
-@media all and (min-width: 1776px) {
+@media all and (width >= 1776px) {
   .wrapper {
     &.vertical {
       margin-bottom: 10px;

@@ -5,12 +5,11 @@
 
 .content {
   margin: 0 auto;
-  padding: 50px 40px 20px 40px;
-
+  padding: 50px 40px 20px;
   width: 940px;
 }
 
-@media all and (min-width: 1776px) {
+@media all and (width >= 1776px) {
   .content {
     width: 1441px;
   }

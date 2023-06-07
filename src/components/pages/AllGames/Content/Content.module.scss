@@ -22,7 +22,7 @@
   }
 }
 
-@media all and (min-width: 1776px) {
+@media all and (width >= 1776px) {
   .gameItemWrapper img {
     width: 224px;
   }

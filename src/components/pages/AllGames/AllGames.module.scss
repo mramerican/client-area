@@ -10,6 +10,7 @@
 .wrapperFilters {
   background-color: $color-lightGrey;
 }
+
 .filters {
   width: 940px;
   margin: 0 auto;
@@ -19,6 +20,7 @@
 .wrapperSort {
   background-color: $color-white;
 }
+
 .contentSort {
   display: flex;
   justify-content: space-between;
@@ -27,10 +29,11 @@
   padding: 20px 0;
 }
 
-@media all and (min-width: 1776px) {
+@media all and (width >= 1776px) {
   .filters {
     width: 1444px;
   }
+
   .contentSort {
     width: 1444px;
   }
