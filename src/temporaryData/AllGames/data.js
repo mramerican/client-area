@@ -1,12 +1,19 @@
-import Img1 from 'images/AllGames/irishweekendbonusbuy_360x360.jpg';
-import Img2 from 'images/AllGames/starguardiens_360x360.jpg';
-import Img3 from 'images/AllGames/superbartender_360x360.jpg';
-import Img4 from 'images/AllGames/wonderfarmbonusbuy_360x360.jpg';
-import Img5 from 'images/AllGames/treasuresnipes_360x360.jpg';
+import ImgLarge1 from 'images/AllGames/irishweekendbonusbuy_360x360.jpg';
+import ImgLarge2 from 'images/AllGames/starguardiens_360x360.jpg';
+import ImgLarge3 from 'images/AllGames/superbartender_360x360.jpg';
+import ImgLarge4 from 'images/AllGames/wonderfarmbonusbuy_360x360.jpg';
+import ImgLarge5 from 'images/AllGames/treasuresnipes_360x360.jpg';
+
+import ImgSmall1 from 'images/HomePage/LatestReleases/Megagreatestcatchbonus_288x375.jpg';
+import ImgSmall2 from 'images/HomePage/LatestReleases/funnyhunting_288x375.jpg';
+import ImgSmall3 from 'images/HomePage/LatestReleases/SoldIt_288x375.jpg';
+import ImgSmall4 from 'images/HomePage/LatestReleases/wonderfarmbonusbuy_288x375.jpg';
+import ImgSmall5 from 'images/HomePage/LatestReleases/treasuresofthegods_288x375.jpg';
 
 export const data = [
   {
-    img: Img1,
+    imgSmall: ImgSmall1,
+    imgLarge: ImgLarge1,
     title: 'Mega Greatest Catch Bonus Buy',
     category: 'Video slot',
     type: 'New Game',
@@ -27,7 +34,8 @@ export const data = [
     id: 1000,
   },
   {
-    img: Img2,
+    imgSmall: ImgSmall2,
+    imgLarge: ImgLarge2,
     title: 'Funny Hunting',
     category: 'Instant game',
     type: 'TOP Performer',
@@ -48,7 +56,8 @@ export const data = [
     id: 1001,
   },
   {
-    img: Img3,
+    imgSmall: ImgSmall3,
+    imgLarge: ImgLarge3,
     title: 'Sold it!',
     category: 'Table Games',
     type: 'EVOPLAY’s Сhoice',
@@ -103,7 +112,8 @@ export const data = [
     id: 1002,
   },
   {
-    img: Img4,
+    imgSmall: ImgSmall4,
+    imgLarge: ImgLarge4,
     title: 'Wonder Farm Bonus Buy',
     category: 'Video slot',
     type: 'Hot Offer',
@@ -124,7 +134,8 @@ export const data = [
     id: 1003,
   },
   {
-    img: Img5,
+    imgSmall: ImgSmall5,
+    imgLarge: ImgLarge5,
     title: 'Treasures of the Gods',
     category: 'Instant game',
     type: 'TOP Europe',
@@ -145,7 +156,8 @@ export const data = [
     id: 1004,
   },
   {
-    img: Img1,
+    imgSmall: ImgSmall1,
+    imgLarge: ImgLarge1,
     title: 'Mega Greatest Catch Bonus Buy',
     category: 'Video slot',
     type: 'TOP Asia/Europe',
@@ -166,7 +178,8 @@ export const data = [
     id: 1005,
   },
   {
-    img: Img1,
+    imgSmall: ImgSmall1,
+    imgLarge: ImgLarge1,
     title: 'Mega Greatest Catch Bonus Buy',
     category: 'Video slot',
     type: 'TOP Asia',
@@ -187,7 +200,8 @@ export const data = [
     id: 1006,
   },
   {
-    img: Img2,
+    imgSmall: ImgSmall2,
+    imgLarge: ImgLarge2,
     title: 'Funny Hunting',
     category: 'Instant game',
     type: 'Unique Graphics',
@@ -208,7 +222,8 @@ export const data = [
     id: 1007,
   },
   {
-    img: Img3,
+    imgSmall: ImgSmall3,
+    imgLarge: ImgLarge3,
     title: 'Sold it!',
     category: 'Video slot',
     date: '04.05.2023',
@@ -228,7 +243,8 @@ export const data = [
     id: 1008,
   },
   {
-    img: Img4,
+    imgSmall: ImgSmall4,
+    imgLarge: ImgLarge4,
     title: 'Wonder Farm Bonus Buy',
     category: 'Video slot',
     date: '04.05.2023',
@@ -248,7 +264,8 @@ export const data = [
     id: 1009,
   },
   {
-    img: Img5,
+    imgSmall: ImgSmall5,
+    imgLarge: ImgLarge5,
     title: 'Treasures of the Gods',
     category: 'Instant game',
     date: '04.05.2023',
@@ -268,7 +285,8 @@ export const data = [
     id: 1010,
   },
   {
-    img: Img1,
+    imgSmall: ImgSmall1,
+    imgLarge: ImgLarge1,
     title: 'Mega Greatest Catch Bonus Buy',
     category: 'Video slot',
     date: '04.05.2023',
@@ -288,7 +306,8 @@ export const data = [
     id: 1011,
   },
   {
-    img: Img1,
+    imgSmall: ImgSmall1,
+    imgLarge: ImgLarge1,
     title: 'Mega Greatest Catch Bonus Buy',
     category: 'Video slot',
     date: '04.05.2023',
@@ -308,7 +327,8 @@ export const data = [
     id: 1012,
   },
   {
-    img: Img2,
+    imgSmall: ImgSmall2,
+    imgLarge: ImgLarge2,
     title: 'Funny Hunting',
     category: 'Instant game',
     date: '04.05.2023',
@@ -328,7 +348,8 @@ export const data = [
     id: 1013,
   },
   {
-    img: Img3,
+    imgSmall: ImgSmall3,
+    imgLarge: ImgLarge3,
     title: 'Sold it!',
     category: 'Video slot',
     date: '04.05.2023',
@@ -348,7 +369,8 @@ export const data = [
     id: 1014,
   },
   {
-    img: Img4,
+    imgSmall: ImgSmall4,
+    imgLarge: ImgLarge4,
     title: 'Wonder Farm Bonus Buy',
     category: 'Video slot',
     date: '04.05.2023',
@@ -368,7 +390,8 @@ export const data = [
     id: 1015,
   },
   {
-    img: Img5,
+    imgSmall: ImgSmall5,
+    imgLarge: ImgLarge5,
     title: 'Treasures of the Gods',
     category: 'Instant game',
     date: '04.05.2023',
@@ -388,7 +411,8 @@ export const data = [
     id: 1016,
   },
   {
-    img: Img1,
+    imgSmall: ImgSmall1,
+    imgLarge: ImgLarge1,
     title: 'Mega Greatest Catch Bonus Buy',
     category: 'Video slot',
     date: '04.05.2023',
@@ -408,7 +432,8 @@ export const data = [
     id: 1017,
   },
   {
-    img: Img1,
+    imgSmall: ImgSmall1,
+    imgLarge: ImgLarge1,
     title: 'Mega Greatest Catch Bonus Buy',
     category: 'Video slot',
     date: '04.05.2023',
@@ -428,7 +453,8 @@ export const data = [
     id: 1018,
   },
   {
-    img: Img2,
+    imgSmall: ImgSmall2,
+    imgLarge: ImgLarge2,
     title: 'Funny Hunting',
     category: 'Instant game',
     date: '04.05.2023',
@@ -448,7 +474,8 @@ export const data = [
     id: 1019,
   },
   {
-    img: Img3,
+    imgSmall: ImgSmall3,
+    imgLarge: ImgLarge3,
     title: 'Sold it!',
     category: 'Video slot',
     date: '04.05.2023',
@@ -468,7 +495,8 @@ export const data = [
     id: 1020,
   },
   {
-    img: Img4,
+    imgSmall: ImgSmall4,
+    imgLarge: ImgLarge4,
     title: 'Wonder Farm Bonus Buy',
     category: 'Video slot',
     date: '04.05.2023',
@@ -488,7 +516,8 @@ export const data = [
     id: 1021,
   },
   {
-    img: Img5,
+    imgSmall: ImgSmall5,
+    imgLarge: ImgLarge5,
     title: 'Treasures of the Gods',
     category: 'Instant game',
     date: '04.05.2023',
@@ -508,7 +537,8 @@ export const data = [
     id: 1022,
   },
   {
-    img: Img1,
+    imgSmall: ImgSmall1,
+    imgLarge: ImgLarge1,
     title: 'Mega Greatest Catch Bonus Buy',
     category: 'Video slot',
     date: '04.05.2023',
@@ -528,7 +558,8 @@ export const data = [
     id: 1023,
   },
   {
-    img: Img1,
+    imgSmall: ImgSmall1,
+    imgLarge: ImgLarge1,
     title: 'Mega Greatest Catch Bonus Buy',
     category: 'Video slot',
     date: '04.05.2023',
@@ -548,7 +579,8 @@ export const data = [
     id: 1024,
   },
   {
-    img: Img2,
+    imgSmall: ImgSmall2,
+    imgLarge: ImgLarge2,
     title: 'Funny Hunting',
     category: 'Instant game',
     date: '04.05.2023',
@@ -568,7 +600,8 @@ export const data = [
     id: 1025,
   },
   {
-    img: Img3,
+    imgSmall: ImgSmall3,
+    imgLarge: ImgLarge3,
     title: 'Sold it!',
     category: 'Video slot',
     date: '04.05.2023',
@@ -588,7 +621,8 @@ export const data = [
     id: 1026,
   },
   {
-    img: Img4,
+    imgSmall: ImgSmall4,
+    imgLarge: ImgLarge4,
     title: 'Wonder Farm Bonus Buy',
     category: 'Video slot',
     date: '04.05.2023',
@@ -608,7 +642,8 @@ export const data = [
     id: 1027,
   },
   {
-    img: Img5,
+    imgSmall: ImgSmall5,
+    imgLarge: ImgLarge5,
     title: 'Treasures of the Gods',
     category: 'Instant game',
     date: '04.05.2023',
@@ -628,7 +663,8 @@ export const data = [
     id: 1028,
   },
   {
-    img: Img1,
+    imgSmall: ImgSmall1,
+    imgLarge: ImgLarge1,
     title: 'Mega Greatest Catch Bonus Buy',
     category: 'Video slot',
     date: '04.05.2023',
@@ -648,7 +684,8 @@ export const data = [
     id: 1029,
   },
   {
-    img: Img1,
+    imgSmall: ImgSmall1,
+    imgLarge: ImgLarge1,
     title: 'Mega Greatest Catch Bonus Buy',
     category: 'Video slot',
     date: '04.05.2023',
@@ -668,7 +705,8 @@ export const data = [
     id: 1030,
   },
   {
-    img: Img2,
+    imgSmall: ImgSmall2,
+    imgLarge: ImgLarge2,
     title: 'Funny Hunting',
     category: 'Instant game',
     date: '04.05.2023',
@@ -688,7 +726,8 @@ export const data = [
     id: 1031,
   },
   {
-    img: Img3,
+    imgSmall: ImgSmall3,
+    imgLarge: ImgLarge3,
     title: 'Sold it!',
     category: 'Video slot',
     date: '04.05.2023',
@@ -708,7 +747,8 @@ export const data = [
     id: 1032,
   },
   {
-    img: Img4,
+    imgSmall: ImgSmall4,
+    imgLarge: ImgLarge4,
     title: 'Wonder Farm Bonus Buy',
     category: 'Video slot',
     date: '04.05.2023',
@@ -728,7 +768,8 @@ export const data = [
     id: 1033,
   },
   {
-    img: Img5,
+    imgSmall: ImgSmall5,
+    imgLarge: ImgLarge5,
     title: 'Treasures of the Gods',
     category: 'Instant game',
     date: '04.05.2023',
@@ -748,7 +789,8 @@ export const data = [
     id: 1034,
   },
   {
-    img: Img1,
+    imgSmall: ImgSmall1,
+    imgLarge: ImgLarge1,
     title: 'Mega Greatest Catch Bonus Buy',
     category: 'Video slot',
     date: '04.05.2023',

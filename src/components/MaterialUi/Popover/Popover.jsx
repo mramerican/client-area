@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Popover as MuiPopover } from '@mui/material';
 
 import styles from 'components/GameItem/FullInfo/FullInfo.module.scss';

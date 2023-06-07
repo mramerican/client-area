@@ -1,0 +1,37 @@
+@import "styles/variables";
+
+.wrapperHeader {
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.wrapperFilters {
+  background-color: $color-lightGrey;
+}
+.filters {
+  width: 940px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.wrapperSort {
+  background-color: $color-white;
+}
+.contentSort {
+  display: flex;
+  justify-content: space-between;
+  width: 940px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+@media all and (min-width: 1776px) {
+  .filters {
+    width: 1444px;
+  }
+  .contentSort {
+    width: 1444px;
+  }
+}

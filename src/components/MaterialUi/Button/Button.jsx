@@ -9,7 +9,7 @@ const propTypes = {
   title: PropTypes.string.isRequired,
 };
 const defaultProps = {
-  link: '',
+  link: null,
   onClick: null,
 };
 
@@ -31,13 +31,11 @@ const CustomButton = styled(MuiButton)(() => ({
   },
 }));
 
-const Button = ({ title, ...props }) => {
-  return (
-    <CustomButton variant="outlined" {...props}>
-      {title}
-    </CustomButton>
-  );
-};
+const Button = ({ title, ...props }) => (
+  <CustomButton variant="outlined" {...props}>
+    {title}
+  </CustomButton>
+);
 
 Button.propTypes = propTypes;
 Button.defaultProps = defaultProps;

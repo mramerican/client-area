@@ -55,6 +55,12 @@
   fill: $color-grey;
 }
 
+.checkbox {
+  position: absolute !important;
+  left: 5px;
+  bottom: 5px;
+}
+
 @media all and (min-width: 1776px) {
   .wrapper {
     width: 224px;

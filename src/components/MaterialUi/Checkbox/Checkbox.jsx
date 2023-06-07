@@ -1,22 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 
 import { Checkbox as MuiCheckbox, styled } from '@mui/material';
 
-import styles from './Checkbox.module.scss';
-
 const propTypes = {
-  stylesWrapper: PropTypes.string,
+  isOpacity: PropTypes.bool,
 };
 const defaultProps = {
-  stylesWrapper: null,
+  isOpacity: false,
 };
 
-const Icon = styled('span')({
+const defaultConfig = {
   borderRadius: 4,
   width: 20,
   height: 20,
+};
+
+const Icon = styled('span')({
+  ...defaultConfig,
+  border: '1px solid rgba(169,174,180,.5)',
+  backgroundColor: '#FFFFFF',
+  'input:hover ~ &': {
+    borderColor: '#0099FA',
+  },
+});
+
+const IconOpacity = styled('span')({
+  ...defaultConfig,
   border: '1px solid #FFFFFF',
   backgroundColor: 'rgba(255,255,255,.5)',
   'input:hover ~ &': {
@@ -26,7 +36,7 @@ const Icon = styled('span')({
 });
 
 const CheckedIcon = styled(Icon)({
-  backgroundColor: '#FFF',
+  backgroundColor: '#FFFFFF',
   borderColor: '#0099FA',
   '&:after': {
     display: 'block',
@@ -44,22 +54,18 @@ const CheckedIcon = styled(Icon)({
     transform: 'rotate(45deg)',
   },
   'input:hover ~ &': {
-    backgroundColor: '#FFF',
+    backgroundColor: '#FFFFFF',
   },
 });
 
-const Checkbox = ({ stylesWrapper, ...props }) => {
-  return (
-    <div className={classNames(styles.wrapper, stylesWrapper)}>
-      <MuiCheckbox
-        name="MuiCheckbox"
-        icon={<Icon />}
-        checkedIcon={<CheckedIcon />}
-        {...props}
-      />
-    </div>
-  );
-};
+const Checkbox = ({ isOpacity, ...props }) => (
+  <MuiCheckbox
+    name="MuiCheckbox"
+    icon={isOpacity ? <IconOpacity /> : <Icon />}
+    checkedIcon={<CheckedIcon />}
+    {...props}
+  />
+);
 
 Checkbox.propTypes = propTypes;
 Checkbox.defaultProps = defaultProps;

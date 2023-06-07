@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import { useSelector } from 'react-redux';
+
+import { allGamesSelector } from 'store/slices/allGames';
 import { viewModeSelector } from 'store/slices/viewMode';
 import { VIEW_MODE } from 'utils/viewMode';
 
@@ -35,16 +36,16 @@ const propTypes = {
     tags: PropTypes.arrayOf(PropTypes.string).isRequired,
     type: PropTypes.string,
   }).isRequired,
-  checkbox: PropTypes.shape({
-    disabled: PropTypes.bool,
-    checked: PropTypes.bool,
-  }),
+  onClick: PropTypes.func.isRequired,
+  checkbox: PropTypes.bool,
 };
 const defaultProps = {
-  checkbox: null,
+  checkbox: false,
 };
 
-const FullInfo = ({ item, checkbox }) => {
+const FullInfo = ({ item, checkbox, onClick }) => {
+  const isCheckedAll = useSelector(allGamesSelector.getSelectAll);
+  const checkedItems = useSelector(allGamesSelector.getSelectedItems);
   const viewMode = useSelector(viewModeSelector.getViewMode);
   const isSimpleMode = viewMode === VIEW_MODE.SIMPLE;
 
@@ -53,7 +54,14 @@ const FullInfo = ({ item, checkbox }) => {
       <div className={styles.img}>
         <img src={item.img} alt={item.title} />
         {item.type && <Type type={item.type} />}
-        {checkbox && <Checkbox {...checkbox} />}
+        {checkbox && (
+          <Checkbox
+            isOpacity
+            checked={isCheckedAll || checkedItems.includes(item.id)}
+            className={styles.checkbox}
+            onChange={(event) => onClick(item.id, event.target.checked)}
+          />
+        )}
       </div>
       <div className={styles.content}>
         <div className={styles.gameTitle}>
