@@ -27,6 +27,10 @@
   width: 940px;
   margin: 0 auto;
   padding: 20px 0;
+
+  &.columnType {
+    padding-bottom: 10px;
+  }
 }
 
 @media all and (width >= 1776px) {
